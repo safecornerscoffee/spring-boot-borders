@@ -1,2 +1,2 @@
 # Borders
-spring bookstore application
+springboot bookstore application
