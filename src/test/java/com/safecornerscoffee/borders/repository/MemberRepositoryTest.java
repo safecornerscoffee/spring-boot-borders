@@ -22,7 +22,7 @@ public class MemberRepositoryTest {
     @Test
     @Rollback(false)
     public void createMember() {
-        Member member = Member.builder().username("mocha").build();
+        Member member = Member.builder().name("mocha").build();
         Long savedId = memberRepository.save(member);
 
         Member findMember = memberRepository.find(savedId);
