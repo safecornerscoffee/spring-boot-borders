@@ -23,9 +23,9 @@ public class MemberRepositoryTest {
     @Rollback(false)
     public void createMember() {
         Member member = Member.builder().name("mocha").build();
-        Long savedId = memberRepository.save(member);
+        memberRepository.save(member);
 
-        Member findMember = memberRepository.find(savedId);
+        Member findMember = memberRepository.findOne(member.getId());
 
         assertThat(findMember.getId()).isEqualTo(member.getId());
         assertThat(findMember).isEqualTo(member);
