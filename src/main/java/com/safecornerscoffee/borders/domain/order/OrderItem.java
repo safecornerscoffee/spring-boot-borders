@@ -1,13 +1,16 @@
 package com.safecornerscoffee.borders.domain.order;
 
 import com.safecornerscoffee.borders.domain.item.Item;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "order_item")
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Setter
 public class OrderItem {

@@ -1,6 +1,7 @@
 package com.safecornerscoffee.borders.domain.order;
 
 import com.safecornerscoffee.borders.domain.Member;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,7 +13,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "orders")
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Setter
 public class Order {

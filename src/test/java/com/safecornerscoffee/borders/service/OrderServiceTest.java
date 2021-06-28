@@ -73,7 +73,6 @@ public class OrderServiceTest {
 
         orderService.cancelOrder(orderId);
 
-
         Order order = orderRepository.findOne(orderId);
 
         assertThat(order.getStatus()).isEqualTo(OrderStatus.CANCEL);
