@@ -2,16 +2,18 @@ package com.safecornerscoffee.borders.repository;
 
 import com.safecornerscoffee.borders.domain.Member;
 import org.springframework.stereotype.Repository;
+import lombok.RequiredArgsConstructor;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Repository
+@RequiredArgsConstructor
 public class MemberRepository {
 
     @PersistenceContext
-    private EntityManager em;
+    private final EntityManager em;
 
     public void save(Member member) {
         em.persist(member);
