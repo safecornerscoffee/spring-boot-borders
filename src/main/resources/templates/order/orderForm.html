@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <title>Order | Borders</title>
+</head>
+<body>
+
+<div th:replace="fragments/bodyHeader :: bodyHeader "></div>
+
+<section class="section">
+    <div class="columns">
+        <div class="column is-4-tablet is-3-desktop is-2-widescreen">
+            <aside th:replace="fragments/menu :: menu"></aside>
+        </div>
+        <div class="column">
+
+            <form action="/order" method="post">
+
+                <div class="field">
+                    <label class="label" for="member">주문회원</label>
+                    <div class="control">
+                        <div class="select">
+                            <select id="member" name="memberId">
+                                <option value="">회원선택</option>
+                                <option th:each="member : ${members}"
+                                        th:text="${member.name}"
+                                        th:value="${member.id}">
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="item">상품명</label>
+                    <div class="control">
+                        <div class="select">
+                            <select id="item" name="itemId">
+                                <option value="">상품선택</option>
+                                <option th:each="item : ${items}"
+                                        th:text="${item.name}"
+                                        th:value="${item.id}">
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="count"> 주문수량</label>
+                    <div class="control">
+                        <input class="input" id="count" name="count" type="number">
+                    </div>
+                </div>
+
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-link" type="submit">Submit</button>
+                        <a class="button is-link is-light" href="/orders">Cancel</a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section><!--section-->
+
+<footer th:replace="fragments/footer :: footer"></footer>
+
+</body>
+</html>
