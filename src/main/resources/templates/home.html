@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <meta charset="UTF-8">
+    <title>Borders</title>
+</head>
+<body>
+
+<div th:replace="fragments/bodyHeader :: bodyHeader "/>
+
+<section class="section">
+    <div class="columns">
+        <div class="column is-4-tablet is-3-desktop is-2-widescreen">
+            <aside th:replace="fragments/menu :: menu"></aside>
+        </div>
+        <div class="column">
+            <p>Index Page</p>
+        </div>
+    </div>
+</section><!--section-->
+
+<footer th:replace="fragments/footer :: footer"></footer>
+
+</body>
+</html>

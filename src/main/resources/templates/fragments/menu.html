@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<aside class="menu" th:fragment="menu">
+    <p class="menu-label">
+        General
+    </p>
+    <ul class="menu-list">
+        <li><a>Dashboard</a></li>
+    </ul>
+    <p class="menu-label">
+        Members
+    </p>
+    <ul class="menu-list">
+        <li><a href="/members">Members</a></li>
+        <li><a href="/members/new">Create a Member</a></li>
+    </ul>
+
+    <p class="menu-label">
+        Products
+    </p>
+    <ul class="menu-list">
+        <li><a href="/items">Products</a></li>
+        <li><a href="/items/new">Add Products</a></li>
+    </ul>
+
+    <p class="menu-label">
+        Orders
+    </p>
+    <ul class="menu-list">
+        <li><a href="/order">Order</a></li>
+        <li><a href="/orders">Orders</a></li>
+    </ul>
+</aside>
