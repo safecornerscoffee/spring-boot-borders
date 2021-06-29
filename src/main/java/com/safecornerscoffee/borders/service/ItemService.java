@@ -1,5 +1,7 @@
 package com.safecornerscoffee.borders.service;
 
+import com.safecornerscoffee.borders.data.UpdateItemRequest;
+import com.safecornerscoffee.borders.domain.item.Book;
 import com.safecornerscoffee.borders.domain.item.Item;
 import com.safecornerscoffee.borders.repository.ItemRepository;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +20,14 @@ public class ItemService {
     @Transactional
     public void saveItem(Item item) {
         itemRepository.save(item);
+    }
+
+    @Transactional
+    public void updateItem(Long itemId, UpdateItemRequest dto) {
+        Item findItem = itemRepository.findOne(itemId);
+        findItem.setPrice(dto.getPrice());
+        findItem.setName(dto.getName());
+        findItem.setStockQuantity(dto.getStockQuantity());
     }
 
     public Item findOne(Long itemId) {

@@ -6,12 +6,15 @@ import com.safecornerscoffee.borders.domain.order.Delivery;
 import com.safecornerscoffee.borders.domain.order.DeliveryStatus;
 import com.safecornerscoffee.borders.domain.order.Order;
 import com.safecornerscoffee.borders.domain.order.OrderItem;
+import com.safecornerscoffee.borders.domain.order.specification.OrderSearch;
 import com.safecornerscoffee.borders.repository.ItemRepository;
 import com.safecornerscoffee.borders.repository.MemberRepository;
 import com.safecornerscoffee.borders.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @Transactional(readOnly = true)
@@ -44,5 +47,9 @@ public class OrderService {
         Order order = orderRepository.findOne(orderId);
 
         order.cancel();
+    }
+
+    public List<Order> findOrders(OrderSearch orderSearch) {
+        return orderRepository.findAllByCriteria(orderSearch);
     }
 }
