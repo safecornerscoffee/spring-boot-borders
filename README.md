@@ -29,6 +29,7 @@ springboot bookstore application
 
 ### Test
 - [ ] [테스트 코드 작성에 대한 나름의 고찰](https://cheese10yun.github.io/spring-about-test/)
+- [ ] [단위 테스트 vs 통합 테스트 vs 인수 테스트](https://woowacourse.github.io/javable/post/2021-05-25-unit-test-vs-integration-test-vs-acceptance-test/)
 - [ ] [Quick Guide to BDDMockito](https://www.baeldung.com/bdd-mockito)
 - [ ] [BBD스타일을 위한 MockitoBBD](https://mskwon25.github.io/tdd/MockitoBBD/)
 - [ ] [Mockito를 이용하여 테스트 코드 작성하는 방법](https://codechacha.com/ko/mockito-best-practice/)
@@ -49,6 +50,8 @@ springboot bookstore application
 - [ ] [Spring 예제로 보는 SOLID SRP](https://cheese10yun.github.io/spring-solid-srp/)
 - [ ] [Spring 예제로 보는 SOLID OCP](https://cheese10yun.github.io/spring-solid-ocp/)
 
+### Optional<T>
+- [ ] [Optional 과 null 에 대해](https://woowacourse.github.io/javable/post/2021-06-20-optional-vs-null/)
 
 
 ### Example
