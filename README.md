@@ -32,12 +32,13 @@ springboot bookstore application
 - [ ] [@Profile 과 @ActiveProfiles](http://wonwoo.ml/index.php/post/1933)
 
 ### Spring Validator
-- [ ] [ConstraintValidator을 이용해서 효과적인 검증](https://cheese10yun.github.io/ConstraintValidator/)
+- [ ] [ConstraintValidator를 이용해서 효과적인 검증](https://cheese10yun.github.io/ConstraintValidator/)
 
 ### Test
-- [ ] [설마 아직도 테스트 코드를 작성 안 하시나요?](https://ssowonny.medium.com/%EC%84%A4%EB%A7%88-%EC%95%84%EC%A7%81%EB%8F%84-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C%EB%A5%BC-%EC%9E%91%EC%84%B1-%EC%95%88-%ED%95%98%EC%8B%9C%EB%82%98%EC%9A%94-b54ec61ef91a)
+
+- [x] [설마 아직도 테스트 코드를 작성 안 하시나요?](https://ssowonny.medium.com/%EC%84%A4%EB%A7%88-%EC%95%84%EC%A7%81%EB%8F%84-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C%EB%A5%BC-%EC%9E%91%EC%84%B1-%EC%95%88-%ED%95%98%EC%8B%9C%EB%82%98%EC%9A%94-b54ec61ef91a)
+- [x] [단위 테스트 vs 통합 테스트 vs 인수 테스트](https://woowacourse.github.io/javable/post/2021-05-25-unit-test-vs-integration-test-vs-acceptance-test/)
 - [ ] [테스트 코드 작성에 대한 나름의 고찰](https://cheese10yun.github.io/spring-about-test/)
-- [ ] [단위 테스트 vs 통합 테스트 vs 인수 테스트](https://woowacourse.github.io/javable/post/2021-05-25-unit-test-vs-integration-test-vs-acceptance-test/)
 - [ ] [Quick Guide to BDDMockito](https://www.baeldung.com/bdd-mockito)
 - [ ] [BBD스타일을 위한 MockitoBBD](https://mskwon25.github.io/tdd/MockitoBBD/)
 - [ ] [Mockito를 이용하여 테스트 코드 작성하는 방법](https://codechacha.com/ko/mockito-best-practice/)
