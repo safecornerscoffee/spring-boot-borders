@@ -5,6 +5,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.util.Assert;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -55,6 +56,11 @@ public class Order {
     }
 
     public static Order createOrder(Member member, Delivery delivery, OrderItem... orderItems) {
+        Assert.notNull(member, "member must be not null");
+        Assert.notNull(delivery, "delivery must be not null");
+        Assert.notNull(orderItems, "orderItems must be not null");
+        Assert.notEmpty(orderItems, "orderItems must be not empty");
+
         Order order = new Order();
         order.setMember(member);
         order.setDelivery(delivery);
