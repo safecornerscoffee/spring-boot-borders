@@ -1,5 +1,6 @@
 package com.safecornerscoffee.borders.repository;
 
+import com.safecornerscoffee.borders.domain.Address;
 import com.safecornerscoffee.borders.domain.Member;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,9 +23,14 @@ public class MemberRepositoryTest {
     @Test
     @Rollback(false)
     public void createMember() {
-        Member member = Member.builder().name("mocha").build();
+        //given
+        Address address = Address.builder().city("city").street("street").zipcode("zipcode").build();
+        Member member = Member.builder().name("mocha").address(address).build();
+
+        //when
         memberRepository.save(member);
 
+        //then
         Member findMember = memberRepository.findOne(member.getId());
 
         assertThat(findMember.getId()).isEqualTo(member.getId());

@@ -1,7 +1,10 @@
 package com.safecornerscoffee.borders.domain.item;
 
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.util.Assert;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -9,6 +12,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "categories")
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Setter
 public class Category {
@@ -38,4 +42,9 @@ public class Category {
         child.setParent(this);
     }
 
+    public Category(String name) {
+        Assert.hasText(name, "name must not be empty");
+
+        this.name = name;
+    }
 }
