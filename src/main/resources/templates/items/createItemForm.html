@@ -38,16 +38,16 @@
                 </div>
 
                 <div class="field">
-                    <label class="label" th:for="author">저자</label>
+                    <label class="label" th:for="*{author}">저자</label>
                     <div class="control">
-                        <input class="input" th:field="*{author}" type="number">
+                        <input class="input" th:id="*{author}" th:name="*{author}" type="text">
                     </div>
                 </div>
 
                 <div class="field">
-                    <label class="label" th:for="isbn">가격</label>
+                    <label class="label" th:for="isbn">ISBN</label>
                     <div class="control">
-                        <input class="input" th:field="*{isbn}" type="number">
+                        <input class="input" th:field="*{isbn}" type="text">
                     </div>
                 </div>
 

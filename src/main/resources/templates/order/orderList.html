@@ -27,7 +27,7 @@
                             <div class="select">
                                 <select th:field="*{orderStatus}">
                                     <option value="">주문상태</option>
-                                    <option th:each="status : ${T(com.safecornerscoffee.borders.domain.OrderStatus).values()}"
+                                    <option th:each="status : ${T(com.safecornerscoffee.borders.domain.order.OrderStatus).values()}"
                                             th:text="${status}"
                                             th:value="${status}">option
                                     </option>
