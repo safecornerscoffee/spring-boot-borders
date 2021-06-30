@@ -18,6 +18,7 @@ springboot bookstore application
 ### JPA
 - [ ] [JPA 기반 테스트 코드 작성 팁](https://cheese10yun.github.io/jpa-test-support/)
 - [ ] [JPA 선호하는 패턴](https://cheese10yun.github.io/jpa-preference/)
+- [ ] [JPA Best Practices](https://github.com/cheese10yun/spring-jpa-best-practices)
 
 ### CI/CD
 - [ ] [인텔리제이 Github Code Review](https://cheese10yun.github.io/intellij-code-review/)
