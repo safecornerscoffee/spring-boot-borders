@@ -109,6 +109,8 @@ public class OrderServiceTest {
                 .name(name)
                 .price(price)
                 .stockQuantity(stockQuantity)
+                .author("mocha")
+                .isbn("9482")
                 .build();
 
         em.persist(book);

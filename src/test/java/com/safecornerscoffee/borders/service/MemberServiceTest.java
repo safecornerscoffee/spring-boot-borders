@@ -1,5 +1,6 @@
 package com.safecornerscoffee.borders.service;
 
+import com.safecornerscoffee.borders.domain.Address;
 import com.safecornerscoffee.borders.domain.Member;
 import com.safecornerscoffee.borders.exception.DuplicateMemberException;
 import com.safecornerscoffee.borders.repository.MemberRepository;
@@ -24,19 +25,26 @@ public class MemberServiceTest {
 
     @Test
     public void joinTest() {
-        Member member = Member.builder().name("mocha").build();
+        //given
+        Address address = Address.builder().city("city").street("street").zipcode("zipcode").build();
+        Member member = Member.builder().name("mocha").address(address).build();
 
+        //when
         Long savedId = memberService.join(member);
 
+        //then
         Member savedMember = memberRepository.findOne(member.getId());
         assertThat(savedMember).isEqualTo(member);
     }
 
     @Test
     public void duplicateMemberExceptionTest() {
-        Member member = Member.builder().name("mocha").build();
-        Member otherMember = Member.builder().name("mocha").build();
+        //given
+        Address address = Address.builder().city("city").street("street").zipcode("zipcode").build();
+        Member member = Member.builder().name("mocha").address(address).build();
+        Member otherMember = Member.builder().name("mocha").address(address).build();
 
+        //when
         assertThatThrownBy(() -> {
             memberService.join(member);
             memberService.join(otherMember);
