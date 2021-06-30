@@ -3,6 +3,7 @@
 springboot bookstore application
 
 ## References
+- [생산성 향상 - 비기는 없다](https://cheese10yun.github.io/productivity/)
 - [Class BDDMockito](https://javadoc.io/static/org.mockito/mockito-core/3.11.2/org/mockito/BDDMockito.html)
 
 ### Thymeleaf
@@ -21,6 +22,7 @@ springboot bookstore application
 ### CI/CD
 - [ ] [인텔리제이 Github Code Review](https://cheese10yun.github.io/intellij-code-review/)
 - [ ] [Github Action With Gradle](https://cheese10yun.github.io/github-action-1/)
+- [ ] [백엔드가 이정도는 해줘야 함](https://velog.io/@city7310/series/%EB%B0%B1%EC%97%94%EB%93%9C%EA%B0%80-%EC%9D%B4%EC%A0%95%EB%8F%84%EB%8A%94-%ED%95%B4%EC%A4%98%EC%95%BC-%ED%95%A8)
 
 ### Spring Validator
 - [ ] [ConstraintValidator을 이용해서 효과적인 검증](https://cheese10yun.github.io/ConstraintValidator/)
@@ -33,6 +35,12 @@ springboot bookstore application
 - [ ] [Mockito의 @Mock, @Spy, @Captor, @InjectMocks](https://codechacha.com/ko/mockito-annotations/)
 - [ ] [Mockito를 이용한 MockTest](https://javacan.tistory.com/entry/MocktestUsingMockito)
 - [ ] [jUnit과 Mockito를 이용한 단위테스트 기초](https://redskelt.github.io/junit/mockito/2017/06/22/junit04.html)
+- [ ] [JUnit 5 meets AssertJ](https://blog.codeleak.pl/2017/11/junit-5-meets-assertj.html)
+
+### TestContainers
+- [ ] [Spring Boot tests with Testcontainers and PostgreSQL, MySQL or MariaDB ](https://blog.codeleak.pl/2020/03/spring-boot-tests-with-testcontainers.html)
+- [ ] [Docker Compose for Spring Boot application with PostgreSQL](https://blog.codeleak.pl/2020/03/spring-boot-docker-compose.html)
+
 
 ### OOP
 - [ ] [Spring OOP](https://cheese10yun.github.io/tags/#OOP)
@@ -40,3 +48,10 @@ springboot bookstore application
 - [ ] [Spring OOP 프로그래밍 예제(6) - 캡슐화 내가 생각하는 캡슐화란(2)](https://cheese10yun.github.io/encapsulation-part-2/)
 - [ ] [Spring 예제로 보는 SOLID SRP](https://cheese10yun.github.io/spring-solid-srp/)
 - [ ] [Spring 예제로 보는 SOLID OCP](https://cheese10yun.github.io/spring-solid-ocp/)
+
+
+
+### Example
+- [ ] [Realworld-springboot-java](https://github.com/raeperd/realworld-springboot-java)
+- [ ] [Realworld-backend-springboot-ddd](https://github.com/borovikovd/realworld-backend-spring-ddd)
+- [ ] [Spring-boot-realworld-example-app](https://github.com/gothinkster/spring-boot-realworld-example-app)
