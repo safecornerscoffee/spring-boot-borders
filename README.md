@@ -12,7 +12,7 @@ springboot bookstore application
 
 ### Lombok
 - [x] [실무에서 Lombok 사용법](https://cheese10yun.github.io/lombok/)
-- [ ] [실무에서 Lombok 사용법 - lombok.config](https://cheese10yun.github.io/lombok-config/)
+- [x] [실무에서 Lombok 사용법 - lombok.config](https://cheese10yun.github.io/lombok-config/)
 - [x] [Builder 기반으로 객체를 안전하게 생성하는 방법](https://cheese10yun.github.io/spring-builder-pattern/)
 
 ### JPA
