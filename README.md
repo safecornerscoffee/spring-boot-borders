@@ -24,6 +24,12 @@ springboot bookstore application
 - [ ] [Github Action With Gradle](https://cheese10yun.github.io/github-action-1/)
 - [ ] [백엔드가 이정도는 해줘야 함](https://velog.io/@city7310/series/%EB%B0%B1%EC%97%94%EB%93%9C%EA%B0%80-%EC%9D%B4%EC%A0%95%EB%8F%84%EB%8A%94-%ED%95%B4%EC%A4%98%EC%95%BC-%ED%95%A8)
 
+### Spring Profiles
+- [ ] [Spring Profiles](https://www.baeldung.com/spring-profiles)
+- [ ] [Spring @Profile 애노테이션](https://johngrib.github.io/wiki/spring-annotation-profile/)
+- [ ] [스프링 부트 개념과 활용 - Profile](https://dailyheumsi.tistory.com/172)
+- [ ] [@Profile 과 @ActiveProfiles](http://wonwoo.ml/index.php/post/1933)
+
 ### Spring Validator
 - [ ] [ConstraintValidator을 이용해서 효과적인 검증](https://cheese10yun.github.io/ConstraintValidator/)
 
