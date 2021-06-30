@@ -3,6 +3,7 @@
 springboot bookstore application
 
 ## References
+- [Class BDDMockito](https://javadoc.io/static/org.mockito/mockito-core/3.11.2/org/mockito/BDDMockito.html)
 
 ### Thymeleaf
 - [ ] [Thymeleaf Page layouts](https://www.thymeleaf.org/doc/articles/layouts.html)
@@ -26,6 +27,12 @@ springboot bookstore application
 
 ### Test
 - [ ] [테스트 코드 작성에 대한 나름의 고찰](https://cheese10yun.github.io/spring-about-test/)
+- [ ] [Quick Guide to BDDMockito](https://www.baeldung.com/bdd-mockito)
+- [ ] [BBD스타일을 위한 MockitoBBD](https://mskwon25.github.io/tdd/MockitoBBD/)
+- [ ] [Mockito를 이용하여 테스트 코드 작성하는 방법](https://codechacha.com/ko/mockito-best-practice/)
+- [ ] [Mockito의 @Mock, @Spy, @Captor, @InjectMocks](https://codechacha.com/ko/mockito-annotations/)
+- [ ] [Mockito를 이용한 MockTest](https://javacan.tistory.com/entry/MocktestUsingMockito)
+- [ ] [jUnit과 Mockito를 이용한 단위테스트 기초](https://redskelt.github.io/junit/mockito/2017/06/22/junit04.html)
 
 ### OOP
 - [ ] [Spring OOP](https://cheese10yun.github.io/tags/#OOP)
