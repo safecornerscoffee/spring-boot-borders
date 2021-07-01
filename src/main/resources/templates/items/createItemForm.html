@@ -14,7 +14,6 @@
             <aside th:replace="fragments/menu :: menu"></aside>
         </div>
         <div class="column">
-
             <form method="post" th:action="@{/items/new}" th:object="${form}">
                 <div class="field">
                     <label class="label" th:for="name">상품명</label>
