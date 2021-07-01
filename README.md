@@ -43,7 +43,7 @@ springboot bookstore application
 - [x] [단위 테스트 vs 통합 테스트 vs 인수 테스트](https://woowacourse.github.io/javable/post/2021-05-25-unit-test-vs-integration-test-vs-acceptance-test/)
 - [ ] [테스트 코드 작성에 대한 나름의 고찰](https://cheese10yun.github.io/spring-about-test/)
 - [ ] [Quick Guide to BDDMockito](https://www.baeldung.com/bdd-mockito)
-
+- [ ] [우아한테크코스 Guide to Test](https://velog.io/@lxxjn0/series/Javable)
 ### Mockito
 
 - [ ] [BBD스타일을 위한 MockitoBBD](https://mskwon25.github.io/tdd/MockitoBBD/)
