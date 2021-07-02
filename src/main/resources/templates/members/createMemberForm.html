@@ -9,7 +9,7 @@
 <section class="section">
   <div class="columns is-centered">
     <div class="column is-12-tablet is-10-desktop is-10-widescreen">
-      <form action="/members/new" method="post" role="form" th:object="${signUpForm}">
+      <form method="post" role="form" th:action="@{/members/new}" th:object="${signUpForm}">
         <div class="field">
           <label class="label" th:for="name">이름</label>
           <div class="control">
