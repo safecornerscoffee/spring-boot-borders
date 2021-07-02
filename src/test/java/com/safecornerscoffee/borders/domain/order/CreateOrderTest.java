@@ -18,7 +18,7 @@ public class CreateOrderTest {
     public void createOrder() {
         //given
         final Address address = Address.builder().city("city").street("street").zipcode("zipcode").build();
-        final Member member = Member.builder().email("mocha@safecorners.io").address(address).build();
+        final Member member = Member.builder().email("mocha@safecorners.io").password("mocha").name("mocha").address(address).build();
         final Delivery delivery = new Delivery(address, DeliveryStatus.READY);
         final Item item = Book.builder().name("mocha recipe").price(9500).stockQuantity(10).author("mocha").isbn("1234567890").build();
         final OrderItem orderItem = OrderItem.createOrderItem(item, 8500, 3);

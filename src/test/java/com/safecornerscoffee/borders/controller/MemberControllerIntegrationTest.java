@@ -21,7 +21,7 @@ import static org.assertj.core.api.Assertions.*;
 @SpringBootTest
 @AutoConfigureMockMvc
 @Transactional
-public class MemberControllerTest {
+public class MemberControllerIntegrationTest {
 
     @Autowired
     MockMvc mockMvc;

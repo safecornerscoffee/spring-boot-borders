@@ -2,46 +2,38 @@ package com.safecornerscoffee.borders.controller;
 
 import com.safecornerscoffee.borders.domain.Address;
 import com.safecornerscoffee.borders.domain.Member;
-import com.safecornerscoffee.borders.service.SessionService;
-import org.junit.Before;
+import com.safecornerscoffee.borders.service.MemberService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-
-import org.springframework.mock.web.MockHttpSession;
+import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
-import org.springframework.test.web.servlet.setup.MockMvcBuilders;
+import org.springframework.transaction.annotation.Transactional;
 
-import static org.hamcrest.Matchers.notNullValue;
+import javax.servlet.http.HttpSession;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.hamcrest.Matchers.*;
 
-import static org.mockito.BDDMockito.*;
 import static org.assertj.core.api.Assertions.*;
 
-@RunWith(MockitoJUnitRunner.class)
-public class SessionControllerTest {
+@RunWith(SpringRunner.class)
+@SpringBootTest
+@AutoConfigureMockMvc
+@Transactional
+public class SessionControllerIntegrationTest {
 
-    @InjectMocks
-    SessionController sessionController;
-
-    @Mock
-    SessionService sessionService;
-
+    @Autowired
     MockMvc mockMvc;
-    MockHttpSession mockHttpSession;
 
-    @Before
-    public void setup() {
-        mockMvc = MockMvcBuilders.standaloneSetup(sessionController).build();
-        mockHttpSession = new MockHttpSession();
-    }
+    @Autowired
+    MemberService memberService;
 
     @Test
     public void signInForm() throws Exception {
@@ -56,32 +48,36 @@ public class SessionControllerTest {
     public void signIn() throws Exception {
         //given
         Member member = createMember();
-        given(sessionService.signIn(anyString(), anyString())).willReturn(member);
+        memberService.join(member);
 
         MockHttpServletRequestBuilder signInRequest = signInRequest();
-        mockMvc.perform(signInRequest)
+        HttpSession httpSession = mockMvc.perform(signInRequest)
                 .andDo(print())
                 .andExpect(status().is3xxRedirection())
                 .andExpect(redirectedUrl("/"))
-                .andExpect(request().sessionAttribute("member", notNullValue()));
+                .andExpect(request().sessionAttribute("member", notNullValue()))
+                .andReturn()
+                .getRequest()
+                .getSession();
 
-        verify(sessionService).signIn(anyString(), anyString());
+        Member sessionUser = (Member) httpSession.getAttribute("member");
+
+        assertThat(sessionUser.getEmail()).isEqualTo(member.getEmail());
+        assertThat(sessionUser.getName()).isEqualTo(member.getName());
+
     }
 
     @Test
     public void signUpForm() throws Exception {
         mockMvc.perform(get("/signup"))
                 .andDo(print())
+                .andExpect(status().isOk())
                 .andExpect(model().attributeExists("signUpForm"))
                 .andExpect(view().name("signup/signup"));
     }
 
     @Test
     public void signUp() throws Exception {
-        //given
-        Member member = createMember();
-        given(sessionService.signUp(any(Member.class))).willReturn(member);
-
         MockHttpServletRequestBuilder signUpRequest = signUpRequest();
         mockMvc.perform(signUpRequest)
                 .andDo(print())
@@ -89,17 +85,12 @@ public class SessionControllerTest {
                 .andExpect(redirectedUrl("/"))
                 .andExpect(request().sessionAttribute("member", notNullValue()));
 
-        verify(sessionService).signUp(any(Member.class));
-    }
+        Member member = memberService.findOneByEmail("mocha@safecorners.io");
 
-    @Test
-    public void logout() throws Exception {
-        Member member = createMember();
-        mockMvc.perform(post("/logout").sessionAttr("member", member))
-                .andDo(print())
-                .andExpect(status().is3xxRedirection())
-                .andExpect(redirectedUrl("/"))
-                .andExpect(request().sessionAttributeDoesNotExist("member"));
+        assertThat(member.getEmail()).isEqualTo("mocha@safecorners.io");
+        assertThat(member.getName()).isEqualTo("mocha");
+        assertThat(member.getAddress()).isEqualTo(new Address("city", "street", "zipcode"));
+
     }
 
     private MockHttpServletRequestBuilder signUpRequest() {

@@ -16,10 +16,12 @@ import java.util.List;
 public class MemberService {
 
     public final MemberRepository memberRepository;
+    public final PasswordEncoder passwordEncoder;
 
     @Transactional
     public Long join(Member member) {
         validateDuplicateMember(member);
+        member.setPassword(passwordEncoder.encode(member.getPassword()));
         memberRepository.save(member);
         return member.getId();
     }
@@ -37,5 +39,9 @@ public class MemberService {
 
     public Member findOne(Long memberId) {
         return memberRepository.findOne(memberId);
+    }
+
+    public Member findOneByEmail(String email) {
+        return memberRepository.findOneByEmail(email);
     }
 }
