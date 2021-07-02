@@ -9,9 +9,9 @@ import javax.validation.constraints.NotEmpty;
 @Setter
 public class SignUpForm {
 
-    @NotEmpty(message = "회원 이름은 필수입니다.")
-    private String name;
-
+    @NotEmpty(message = "이메일 주소를 입력해주세요.")
+    private String email;
+    private String password;
     private String city;
     private String street;
     private String zipcode;

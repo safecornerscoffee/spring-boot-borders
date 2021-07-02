@@ -96,8 +96,8 @@ public class OrderServiceTest {
 
     private Member createMember() {
         Member member = Member.builder()
-                .name("mocha")
-                .address(new Address("서울", "강가", "123-123"))
+                .email("mocha@safecorners.io")
+                .address(new Address("city", "street", "zipcode"))
                 .build();
 
         em.persist(member);

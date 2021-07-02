@@ -16,7 +16,7 @@ import static org.assertj.core.api.Assertions.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Transactional
-public class MemberServiceTest {
+public class MemberServiceIntegrationTest {
 
     @Autowired
     MemberService memberService;
@@ -27,7 +27,7 @@ public class MemberServiceTest {
     public void joinTest() {
         //given
         Address address = Address.builder().city("city").street("street").zipcode("zipcode").build();
-        Member member = Member.builder().name("mocha").address(address).build();
+        Member member = Member.builder().email("mocha@safecorners.io").password("mocha").name("mocha").address(address).build();
 
         //when
         Long savedId = memberService.join(member);
@@ -41,13 +41,13 @@ public class MemberServiceTest {
     public void duplicateMemberExceptionTest() {
         //given
         Address address = Address.builder().city("city").street("street").zipcode("zipcode").build();
-        Member member = Member.builder().name("mocha").address(address).build();
-        Member otherMember = Member.builder().name("mocha").address(address).build();
+        Member member = Member.builder().email("mocha@safecorners.io").password("mocha").name("mocha").address(address).build();
+        Member anotherMember = Member.builder().email("mocha@safecorners.io").password("cappuccino").name("cappuccino").address(address).build();
 
         //when
         assertThatThrownBy(() -> {
             memberService.join(member);
-            memberService.join(otherMember);
+            memberService.join(anotherMember);
         }).isInstanceOf(DuplicateMemberException.class);
     }
 }

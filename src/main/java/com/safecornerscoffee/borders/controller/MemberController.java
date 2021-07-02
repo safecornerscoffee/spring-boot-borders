@@ -35,7 +35,7 @@ public class MemberController {
 
         Address address = new Address(dto.getCity(), dto.getStreet(), dto.getZipcode());
         Member member = Member.builder()
-                .name(dto.getName())
+                .email(dto.getEmail())
                 .address(address)
                 .build();
 
