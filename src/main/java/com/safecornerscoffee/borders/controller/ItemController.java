@@ -6,6 +6,7 @@ import com.safecornerscoffee.borders.domain.item.Book;
 import com.safecornerscoffee.borders.domain.item.Item;
 import com.safecornerscoffee.borders.service.ItemService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

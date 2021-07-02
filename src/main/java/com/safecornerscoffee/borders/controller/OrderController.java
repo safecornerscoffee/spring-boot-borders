@@ -22,7 +22,7 @@ public class OrderController {
     private final MemberService memberService;
     private final ItemService itemService;
 
-    @GetMapping(value = "/order")
+    @GetMapping(value = "/orders/new")
     public String createForm(Model model) {
         List<Member> members = memberService.findMembers();
         List<Item> items = itemService.findItems();
@@ -30,10 +30,10 @@ public class OrderController {
         model.addAttribute("members", members);
         model.addAttribute("items", items);
 
-        return "order/orderForm";
+        return "orders/orderForm";
     }
 
-    @PostMapping(value = "/order")
+    @PostMapping(value = "/orders/new")
     public String order(@RequestParam("memberId") Long memberId, @RequestParam("itemId") Long itemId, @RequestParam("count") int count) {
         orderService.order(memberId, itemId, count);
         return "redirect:/orders";
@@ -45,7 +45,7 @@ public class OrderController {
         List<Order> orders = orderService.findOrders(orderSearch);
         model.addAttribute("orders", orders);
 
-        return "order/orderList";
+        return "orders/orderList";
     }
 
     @PostMapping(value = "/orders/{orderId}/cancel")

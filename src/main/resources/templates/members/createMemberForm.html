@@ -1,46 +1,52 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/header :: header">
 
 </head>
 <body>
 <div th:replace="fragments/bodyHeader :: bodyHeader"></div>
 
-<form action="/members/new" method="post" role="form" th:object="${signUpForm}">
-  <div class="field">
-    <label class="label" th:for="name">이름</label>
-    <div class="control">
-      <input class="input" placeholder="name" th:field="*{name}" type="text">
+<section class="section">
+  <div class="columns is-centered">
+    <div class="column is-12-tablet is-10-desktop is-10-widescreen">
+      <form method="post" role="form" th:action="@{/members/new}" th:object="${signUpForm}">
+        <div class="field">
+          <label class="label" th:for="name">이름</label>
+          <div class="control">
+            <input class="input" placeholder="name" th:field="*{name}" type="text">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" th:for="city">도시</label>
+          <div class="control">
+            <input class="input" th:field="*{city}" type="text">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" th:for="street">거리</label>
+          <div class="control">
+            <input class="input" th:field="*{street}" type="text">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" th:for="zipcode">우편번호</label>
+          <div class="control">
+            <input class="input" th:field="*{zipcode}" type="text">
+          </div>
+        </div>
+
+        <div class="field">
+          <button class="button is-success" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
     </div>
   </div>
-
-  <div class="field">
-    <label class="label" th:for="city">도시</label>
-    <div class="control">
-      <input class="input" th:field="*{city}" type="text">
-    </div>
-  </div>
-
-  <div class="field">
-    <label class="label" th:for="street">거리</label>
-    <div class="control">
-      <input class="input" th:field="*{street}" type="text">
-    </div>
-  </div>
-
-  <div class="field">
-    <label class="label" th:for="zipcode">우편번호</label>
-    <div class="control">
-      <input class="input" th:field="*{zipcode}" type="text">
-    </div>
-  </div>
-
-  <div class="field">
-    <button class="button is-success" type="submit">
-      Submit
-    </button>
-  </div>
-</form>
+</section>
 
 <div th:replace="fragments/footer :: footer"></div>
 </body>

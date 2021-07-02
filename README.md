@@ -7,8 +7,10 @@ springboot bookstore application
 - [Class BDDMockito](https://javadoc.io/static/org.mockito/mockito-core/3.11.2/org/mockito/BDDMockito.html)
 
 ### Thymeleaf
-- [ ] [Thymeleaf Page layouts](https://www.thymeleaf.org/doc/articles/layouts.html)
-- [ ] [Thymeleaf Examples: Layouts](https://github.com/thymeleaf/thymeleafexamples-layouts)
+- [x] [Thymeleaf Standard Expression Syntax](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#standard-expression-syntax)
+- [x] [Thymeleaf Expression Basic Objects](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#appendix-a-expression-basic-objects)
+- [x] [Thymeleaf Page layouts](https://www.thymeleaf.org/doc/articles/layouts.html)
+- [x] [Thymeleaf Examples: Layouts](https://github.com/thymeleaf/thymeleafexamples-layouts)
 
 ### Lombok
 - [x] [실무에서 Lombok 사용법](https://cheese10yun.github.io/lombok/)
@@ -23,7 +25,7 @@ springboot bookstore application
 ### CI/CD
 - [ ] [인텔리제이 Github Code Review](https://cheese10yun.github.io/intellij-code-review/)
 - [ ] [Github Action With Gradle](https://cheese10yun.github.io/github-action-1/)
-- [ ] [백엔드가 이정도는 해줘야 함](https://velog.io/@city7310/series/%EB%B0%B1%EC%97%94%EB%93%9C%EA%B0%80-%EC%9D%B4%EC%A0%95%EB%8F%84%EB%8A%94-%ED%95%B4%EC%A4%98%EC%95%BC-%ED%95%A8)
+- [x] [백엔드가 이정도는 해줘야 함](https://velog.io/@city7310/series/%EB%B0%B1%EC%97%94%EB%93%9C%EA%B0%80-%EC%9D%B4%EC%A0%95%EB%8F%84%EB%8A%94-%ED%95%B4%EC%A4%98%EC%95%BC-%ED%95%A8)
 
 ### Spring Profiles
 - [ ] [Spring Profiles](https://www.baeldung.com/spring-profiles)
@@ -32,6 +34,7 @@ springboot bookstore application
 - [ ] [@Profile 과 @ActiveProfiles](http://wonwoo.ml/index.php/post/1933)
 
 ### Spring Validator
+
 - [ ] [ConstraintValidator를 이용해서 효과적인 검증](https://cheese10yun.github.io/ConstraintValidator/)
 
 ### Test
@@ -40,6 +43,10 @@ springboot bookstore application
 - [x] [단위 테스트 vs 통합 테스트 vs 인수 테스트](https://woowacourse.github.io/javable/post/2021-05-25-unit-test-vs-integration-test-vs-acceptance-test/)
 - [ ] [테스트 코드 작성에 대한 나름의 고찰](https://cheese10yun.github.io/spring-about-test/)
 - [ ] [Quick Guide to BDDMockito](https://www.baeldung.com/bdd-mockito)
+- [ ] [우아한테크코스 Guide to Test](https://velog.io/@lxxjn0/series/Javable)
+
+### Mockito
+
 - [ ] [BBD스타일을 위한 MockitoBBD](https://mskwon25.github.io/tdd/MockitoBBD/)
 - [ ] [Mockito를 이용하여 테스트 코드 작성하는 방법](https://codechacha.com/ko/mockito-best-practice/)
 - [ ] [Mockito의 @Mock, @Spy, @Captor, @InjectMocks](https://codechacha.com/ko/mockito-annotations/)
@@ -48,6 +55,7 @@ springboot bookstore application
 - [ ] [JUnit 5 meets AssertJ](https://blog.codeleak.pl/2017/11/junit-5-meets-assertj.html)
 
 ### TestContainers
+
 - [ ] [Spring Boot tests with Testcontainers and PostgreSQL, MySQL or MariaDB ](https://blog.codeleak.pl/2020/03/spring-boot-tests-with-testcontainers.html)
 - [ ] [Docker Compose for Spring Boot application with PostgreSQL](https://blog.codeleak.pl/2020/03/spring-boot-docker-compose.html)
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/header :: header">
     <title>Order | Borders</title>
 </head>
@@ -14,7 +14,7 @@
         </div>
         <div class="column">
 
-            <form action="/order" method="post">
+            <form action="/orders/new" method="post">
 
                 <div class="field">
                     <label class="label" for="member">주문회원</label>
@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="field">
-                    <label class="label" for="count"> 주문수량</label>
+                    <label class="label" for="count">주문수량</label>
                     <div class="control">
                         <input class="input" id="count" name="count" type="number">
                     </div>

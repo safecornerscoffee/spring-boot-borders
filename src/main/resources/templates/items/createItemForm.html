@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head th:replace="fragments/header :: header">
     <meta charset="UTF-8">
     <title>Borders</title>
@@ -14,7 +14,6 @@
             <aside th:replace="fragments/menu :: menu"></aside>
         </div>
         <div class="column">
-
             <form method="post" th:action="@{/items/new}" th:object="${form}">
                 <div class="field">
                     <label class="label" th:for="name">상품명</label>
@@ -38,16 +37,16 @@
                 </div>
 
                 <div class="field">
-                    <label class="label" th:for="author">저자</label>
+                    <label class="label" th:for="*{author}">저자</label>
                     <div class="control">
-                        <input class="input" th:field="*{author}" type="number">
+                        <input class="input" th:field="*{author}" type="text">
                     </div>
                 </div>
 
                 <div class="field">
-                    <label class="label" th:for="isbn">가격</label>
+                    <label class="label" th:for="isbn">ISBN</label>
                     <div class="control">
-                        <input class="input" th:field="*{isbn}" type="number">
+                        <input class="input" th:field="*{isbn}" type="text">
                     </div>
                 </div>
 
