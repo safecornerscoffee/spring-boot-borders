@@ -49,7 +49,7 @@ springboot bookstore application
 
 - [x] [설마 아직도 테스트 코드를 작성 안 하시나요?](https://ssowonny.medium.com/%EC%84%A4%EB%A7%88-%EC%95%84%EC%A7%81%EB%8F%84-%ED%85%8C%EC%8A%A4%ED%8A%B8-%EC%BD%94%EB%93%9C%EB%A5%BC-%EC%9E%91%EC%84%B1-%EC%95%88-%ED%95%98%EC%8B%9C%EB%82%98%EC%9A%94-b54ec61ef91a)
 - [x] [단위 테스트 vs 통합 테스트 vs 인수 테스트](https://woowacourse.github.io/javable/post/2021-05-25-unit-test-vs-integration-test-vs-acceptance-test/)
-- [ ] [테스트 코드 작성에 대한 나름의 고찰](https://cheese10yun.github.io/spring-about-test/)
+- [x] [테스트 코드 작성에 대한 나름의 고찰](https://cheese10yun.github.io/spring-about-test/)
 - [x] [**우아한테크코스 Guide to Javable**](https://velog.io/@lxxjn0/series/Javable)
 - [ ] [TDD 발담그기](https://javacan.tistory.com/entry/Feel-TDD-at-gong-gam-seminar?category=454313)
 - [ ] [자바 플레이그라운드 with TDD, 클린코드 ](https://edu.nextstep.camp/c/9WPRB0ys/)
@@ -83,7 +83,7 @@ springboot bookstore application
 - [ ] [Spring 예제로 보는 SOLID SRP](https://cheese10yun.github.io/spring-solid-srp/)
 - [ ] [Spring 예제로 보는 SOLID OCP](https://cheese10yun.github.io/spring-solid-ocp/)
 
-### Optional<T>
+### `Optional<T>`
 - [ ] [Optional 과 null 에 대해](https://woowacourse.github.io/javable/post/2021-06-20-optional-vs-null/)
 
 ### Example
