@@ -8,24 +8,60 @@ import static org.assertj.core.api.Assertions.*;
 
 public class MemberTest {
 
+    String email;
+    String password;
     String name;
     Address address;
 
     @Before
     public void beforeEach() {
+        email = "mocha@safecorners.io";
+        password = "mocha";
         name = "mocha";
         address = Address.builder()
                 .city("city")
                 .street("street")
-                .zipcode("224-235")
+                .zipcode("zipcode")
                 .build();
     }
 
     @Test
-    public void MemberNameShouldNotBeNull() {
+    public void MemberEmailShouldBeNotEmpty() {
         assertThatThrownBy(() -> {
             final Member member = Member.builder()
-                    .name(null)
+                    .email(null)
+                    .password(password)
+                    .name(name)
+                    .address(address)
+                    .build();
+        }).isInstanceOf(IllegalArgumentException.class);
+
+        assertThatThrownBy(() -> {
+            final Member member = Member.builder()
+                    .email("")
+                    .password(password)
+                    .name(name)
+                    .address(address)
+                    .build();
+        }).isInstanceOf(IllegalArgumentException.class);
+    }
+
+    @Test
+    public void MemberPasswordShouldBeNotEmpty() {
+        assertThatThrownBy(() -> {
+            final Member member = Member.builder()
+                    .email(email)
+                    .password(null)
+                    .name(name)
+                    .address(address)
+                    .build();
+        }).isInstanceOf(IllegalArgumentException.class);
+
+        assertThatThrownBy(() -> {
+            final Member member = Member.builder()
+                    .email(email)
+                    .password("")
+                    .name(name)
                     .address(address)
                     .build();
         }).isInstanceOf(IllegalArgumentException.class);
@@ -35,16 +71,20 @@ public class MemberTest {
     public void MemberNameShouldNotBeEmpty() {
         assertThatThrownBy(() -> {
             final Member member = Member.builder()
+                    .email(email)
+                    .password(password)
                     .name("")
-                    .address(address)
+                    .address(null)
                     .build();
         }).isInstanceOf(IllegalArgumentException.class);
     }
 
     @Test
-    public void MemberAddressShouldNotBeNull() {
+    public void MemberAddressShouldBeNotNull() {
         assertThatThrownBy(() -> {
             final Member member = Member.builder()
+                    .email(email)
+                    .password(password)
                     .name(name)
                     .address(null)
                     .build();
@@ -55,10 +95,14 @@ public class MemberTest {
     public void MemberBuilder() {
 
         final Member member = Member.builder()
+                .email(email)
+                .password(password)
                 .name(name)
                 .address(address)
                 .build();
 
+        assertThat(member.getEmail()).isEqualTo(email);
+        assertThat(member.getPassword()).isEqualTo(password);
         assertThat(member.getName()).isEqualTo(name);
         assertThat(member.getAddress()).isEqualTo(address);
     }

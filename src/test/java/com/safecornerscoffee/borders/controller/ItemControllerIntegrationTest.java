@@ -24,7 +24,7 @@ import static org.assertj.core.api.Assertions.*;
 @SpringBootTest
 @AutoConfigureMockMvc
 @Transactional
-public class ItemControllerTest {
+public class ItemControllerIntegrationTest {
 
     @Autowired
     MockMvc mockMvc;

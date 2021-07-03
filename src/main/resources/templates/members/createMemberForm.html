@@ -9,7 +9,21 @@
 <section class="section">
   <div class="columns is-centered">
     <div class="column is-12-tablet is-10-desktop is-10-widescreen">
-      <form method="post" role="form" th:action="@{/members/new}" th:object="${signUpForm}">
+      <form action="/members/new" method="post" th:object="${signUpForm}">
+        <div class="field">
+          <label class="label" th:for="email">이메일</label>
+          <div class="control">
+            <input class="input" placeholder="cappuccino@safecorners.io" th:field="*{email}" type="email">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label" th:for="password">비밀번호</label>
+          <div class="control">
+            <input class="input" placeholder="********" th:field="*{password}" type="password">
+          </div>
+        </div>
+
         <div class="field">
           <label class="label" th:for="name">이름</label>
           <div class="control">

@@ -18,7 +18,7 @@
                 <form th:object="${orderSearch}">
                     <div class="field">
                         <div class="control">
-                            <input class="input" th:field="*{memberName}" type="text">
+                            <input class="input" th:field="*{memberName}" type="text"/>
                         </div>
                     </div>
 
@@ -46,7 +46,7 @@
                 <thead>
                 <tr>
                     <th>#</th>
-                    <th>회원명</th>
+                    <th>이메일</th>
                     <th>대표상품 이름</th>
                     <th>대표상품 가격</th>
                     <th>대표상품 주문수량</th>
@@ -58,7 +58,7 @@
                 <tbody>
                 <tr th:each="order : ${orders}">
                     <td th:text="${order.id}"></td>
-                    <td th:text="${order.member.name}"></td>
+                    <td th:text="${order.member.email}"></td>
                     <td th:text="${order.orderItems[0].item.name}"></td>
                     <td th:text="${order.orderItems[0].item.price}"></td>
                     <td th:text="${order.orderItems[0].count}"></td>

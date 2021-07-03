@@ -7,13 +7,11 @@ import javax.validation.constraints.NotEmpty;
 
 @Getter
 @Setter
-public class SignUpForm {
+public class SignInForm {
 
     @NotEmpty(message = "이메일 주소를 입력해주세요.")
     private String email;
+
+    @NotEmpty(message = "비밀번호를 입력해주세요.")
     private String password;
-    private String name;
-    private String city;
-    private String street;
-    private String zipcode;
 }

@@ -33,8 +33,11 @@ public class MemberController {
             return "members/createMemberForm";
         }
 
+        // todo MemberAssembler
         Address address = new Address(dto.getCity(), dto.getStreet(), dto.getZipcode());
         Member member = Member.builder()
+                .email(dto.getEmail())
+                .password(dto.getPassword())
                 .name(dto.getName())
                 .address(address)
                 .build();

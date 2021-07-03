@@ -23,7 +23,7 @@
                             <select id="member" name="memberId">
                                 <option value="">회원선택</option>
                                 <option th:each="member : ${members}"
-                                        th:text="${member.name}"
+                                        th:text="${member.email}"
                                         th:value="${member.id}">
                                 </option>
                             </select>

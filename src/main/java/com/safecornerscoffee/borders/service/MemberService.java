@@ -16,16 +16,18 @@ import java.util.List;
 public class MemberService {
 
     public final MemberRepository memberRepository;
+    public final PasswordEncoder passwordEncoder;
 
     @Transactional
     public Long join(Member member) {
         validateDuplicateMember(member);
+        member.setPassword(passwordEncoder.encode(member.getPassword()));
         memberRepository.save(member);
         return member.getId();
     }
 
     private void validateDuplicateMember(Member member) {
-        List<Member> findMembers = memberRepository.findByName(member.getName());
+        List<Member> findMembers = memberRepository.findByEmail(member.getEmail());
         if (!findMembers.isEmpty()) {
             throw new DuplicateMemberException("이미 존재하는 회원입니다.");
         }
@@ -37,5 +39,9 @@ public class MemberService {
 
     public Member findOne(Long memberId) {
         return memberRepository.findOne(memberId);
+    }
+
+    public Member findOneByEmail(String email) {
+        return memberRepository.findOneByEmail(email);
     }
 }

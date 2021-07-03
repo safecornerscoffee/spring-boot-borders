@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<nav class="pagination" th:fragment="pagination">
+    <a class="pagination-previous" href="#">Previous</a>
+    <a class="pagination-next" href="#">Next page</a>
+    <ul class="pagination-list">
+        <li>
+            <a class="pagination-link" href="#">1</a>
+        </li>
+        <li>
+            <span class="pagination-ellipsis">&hellip;</span>
+        </li>
+        <li>
+            <a class="pagination-link" href="#">45</a>
+        </li>
+        <li>
+            <a class="pagination-link is-current" href="#">46</a>
+        </li>
+        <li>
+            <a class="pagination-link" href="#">47</a>
+        </li>
+        <li>
+            <span class="pagination-ellipsis">&hellip;</span>
+        </li>
+        <li>
+            <a class="pagination-link" href="#">86</a>
+        </li>
+    </ul>
+</nav><!--pagination-->
