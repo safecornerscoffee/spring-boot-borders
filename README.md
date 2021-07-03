@@ -62,7 +62,7 @@ springboot bookstore application
 - [x] [Mockito의 @Mock, @Spy, @Captor, @InjectMocks](https://codechacha.com/ko/mockito-annotations/)
 - [x] [Mockito를 이용한 MockTest](https://javacan.tistory.com/entry/MocktestUsingMockito)
 - [x] [jUnit과 Mockito를 이용한 단위테스트 기초](https://redskelt.github.io/junit/mockito/2017/06/22/junit04.html)
-- [ ] [Mockito @Mock @MockBean @Spy @SpyBean 차이점 정리](https://cobbybb.tistory.com/16)
+- [x] [Mockito @Mock @MockBean @Spy @SpyBean 차이점 정리](https://cobbybb.tistory.com/16)
 
 ### Test Coverage
 
