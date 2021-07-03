@@ -42,7 +42,7 @@ public class SessionServiceTest {
         Member signedMember = sessionService.signIn(member.getEmail(), member.getPassword());
 
         //then
-        verify(memberService).findOneByEmail(anyString());
+        then(memberService).should().findOneByEmail(anyString());
         assertThat(signedMember).isNotNull();
         assertThat(signedMember.getEmail()).isEqualTo(member.getEmail());
     }
@@ -57,8 +57,8 @@ public class SessionServiceTest {
         Member signUpMember = sessionService.signUp(member);
 
         //then
-        verify(memberService).join(any(Member.class));
-        verify(memberService).findOne(any(Long.class));
+        then(memberService).should().join(any(Member.class));
+        then(memberService).should().findOne(any(Long.class));
 
     }
 }

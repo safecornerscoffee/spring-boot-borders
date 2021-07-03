@@ -65,7 +65,9 @@ public class SessionControllerTest {
                 .andExpect(redirectedUrl("/"))
                 .andExpect(request().sessionAttribute("member", notNullValue()));
 
-        verify(sessionService).signIn(anyString(), anyString());
+        then(sessionService)
+                .should()
+                .signIn(anyString(), anyString());
     }
 
     @Test
@@ -89,7 +91,9 @@ public class SessionControllerTest {
                 .andExpect(redirectedUrl("/"))
                 .andExpect(request().sessionAttribute("member", notNullValue()));
 
-        verify(sessionService).signUp(any(Member.class));
+        then(sessionService)
+                .should()
+                .signUp(any(Member.class));
     }
 
     @Test
