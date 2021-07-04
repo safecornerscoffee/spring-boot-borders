@@ -7,4 +7,6 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
-script: "./gradlew clean build"
+script:
+  - "./gradlew test"
+  - "./gradlew clean build"
