@@ -2,9 +2,9 @@ package com.safecornerscoffee.borders.service;
 
 import com.safecornerscoffee.borders.domain.Member;
 import com.safecornerscoffee.borders.exception.DuplicateMemberException;
+import com.safecornerscoffee.borders.helper.PasswordEncoder;
 import com.safecornerscoffee.borders.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,7 +21,7 @@ public class MemberService {
     @Transactional
     public Long join(Member member) {
         validateDuplicateMember(member);
-        member.setPassword(passwordEncoder.encode(member.getPassword()));
+        member.setPassword(passwordEncoder.generateFromPassword(member.getPassword()));
         memberRepository.save(member);
         return member.getId();
     }

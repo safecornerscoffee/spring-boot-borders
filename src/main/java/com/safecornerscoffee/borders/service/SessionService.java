@@ -1,15 +1,14 @@
 package com.safecornerscoffee.borders.service;
 
 import com.safecornerscoffee.borders.domain.Member;
+import com.safecornerscoffee.borders.helper.PasswordEncoder;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
-@Slf4j
 public class SessionService {
 
     private final MemberService memberService;
@@ -25,7 +24,7 @@ public class SessionService {
 
     private void match(String password, String hashedPassword) {
 
-        if (!passwordEncoder.match(password, hashedPassword)) {
+        if (!passwordEncoder.compareHashAndPassword(password, hashedPassword)) {
             // todo convert to NotFoundMember or InvalidEmailOrPassword Exception
             throw new IllegalStateException("invalid email or password.");
         }
