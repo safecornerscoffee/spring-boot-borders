@@ -34,20 +34,6 @@
                 </div>
 
                 <div class="field">
-                    <label class="label" th:for="price">가격</label>
-                    <div class="control">
-                        <input class="input" th:field="*{price}" type="number">
-                    </div>
-                </div>
-
-                <div class="field">
-                    <label class="label" th:for="stockQuantity">수량</label>
-                    <div class="control">
-                        <input class="input" th:field="*{stockQuantity}" type="number">
-                    </div>
-                </div>
-
-                <div class="field">
                     <label class="label" th:for="*{author}">저자</label>
                     <div class="control">
                         <input class="input" th:field="*{author}" type="text">
@@ -58,6 +44,20 @@
                     <label class="label" th:for="isbn">ISBN</label>
                     <div class="control">
                         <input class="input" th:field="*{isbn}" type="text">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label" th:for="price">가격</label>
+                    <div class="control">
+                        <input class="input" th:field="*{price}" type="number">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label" th:for="stockQuantity">수량</label>
+                    <div class="control">
+                        <input class="input" th:field="*{stockQuantity}" type="number">
                     </div>
                 </div>
 
