@@ -30,7 +30,7 @@ public class OrderController {
         model.addAttribute("members", members);
         model.addAttribute("items", items);
 
-        return "orders/orderForm";
+        return "create-order";
     }
 
     @PostMapping(value = "/orders/new")
@@ -45,7 +45,7 @@ public class OrderController {
         List<Order> orders = orderService.findOrders(orderSearch);
         model.addAttribute("orders", orders);
 
-        return "orders/orderList";
+        return "orders";
     }
 
     @PostMapping(value = "/orders/{orderId}/cancel")
