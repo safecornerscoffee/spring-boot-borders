@@ -14,6 +14,40 @@
             <aside th:replace="fragments/menu :: menu"></aside>
         </div>
         <div class="column">
+            <h1 class="title">상품</h1>
+
+            <nav class="level">
+                <div class="level-left">
+                    <p class="level-item">
+                        <a class="button is-success" href="/items/new">등록</a>
+                    </p>
+
+                    <div class="level-item is-hidden-tablet-only">
+                        <div class="field has-addons">
+                            <p class="control">
+                                <input class="input" placeholder="Title, isbn..." type="text">
+                            </p>
+                            <p class="control">
+                                <button class="button">검색</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="level-right">
+                    <div class="level-item">
+                        Order by
+                    </div>
+                    <div class="level-item">
+                        <div class="select">
+                            <select>
+                                <option>-</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </nav><!-- toolbar -->
+
             <table class="table is-hoverable is-fullwidth">
                 <thead>
                 <tr>
@@ -21,7 +55,7 @@
                     <th>상품명</th>
                     <th>가격</th>
                     <th>재고수량</th>
-                    <th>&#128545;</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
