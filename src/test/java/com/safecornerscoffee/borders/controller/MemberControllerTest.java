@@ -66,7 +66,7 @@ public class MemberControllerTest {
 
         mockMvc.perform(get("/members/" + memberId + "/edit"))
                 .andExpect(status().isOk())
-                .andExpect(model().attributeExists("member"))
+                .andExpect(model().attributeExists("editMemberForm"))
                 .andExpect(view().name("members/edit-member"));
 
         then(memberService).should().findOne(anyLong());

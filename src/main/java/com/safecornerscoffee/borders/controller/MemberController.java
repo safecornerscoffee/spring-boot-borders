@@ -1,5 +1,6 @@
 package com.safecornerscoffee.borders.controller;
 
+import com.safecornerscoffee.borders.data.EditMemberForm;
 import com.safecornerscoffee.borders.data.SignUpForm;
 import com.safecornerscoffee.borders.domain.Address;
 import com.safecornerscoffee.borders.domain.Member;
@@ -51,13 +52,22 @@ public class MemberController {
     @GetMapping("/members/{memberId}/edit")
     public String editForm(@PathVariable Long memberId, Model model) {
         Member member = memberService.findOne(memberId);
-        model.addAttribute("member", member);
+        EditMemberForm editMemberForm = EditMemberForm.builder()
+                .id(member.getId())
+                .email(member.getEmail())
+                .password(member.getPassword())
+                .city(member.getAddress().getCity())
+                .street(member.getAddress().getStreet())
+                .zipcode(member.getAddress().getZipcode())
+                .build();
+
+        model.addAttribute("editMemberForm", editMemberForm);
 
         return "members/edit-member";
     }
 
     @PostMapping("/members/{memberId}/edit")
-    public String edit(@PathVariable Long memberId, @Valid SignUpForm dto, BindingResult result) {
+    public String edit(@PathVariable Long memberId, @Valid EditMemberForm dto, BindingResult result) {
 
         if (result.hasErrors()) {
             return "members/edit-member";
