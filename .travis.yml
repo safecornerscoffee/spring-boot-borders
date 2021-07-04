@@ -7,6 +7,18 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
-script:
-  - "./gradlew test"
-  - "./gradlew clean build"
+jobs:
+  include:
+    - stage: test
+      script:
+        - "./gradlew test"
+    - stage: build
+      script:
+        - "./gradlew clean build"
+
+stages:
+  - name: test
+  - name: build
+    if: branch = master
+
+
