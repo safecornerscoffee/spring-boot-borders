@@ -1,5 +1,5 @@
 # SpringBoot Borders
-
+[![Build Status](https://travis-ci.com/safecornerscoffee/spring-boot-borders.svg?branch=master)](https://travis-ci.com/safecornerscoffee/spring-boot-borders)
 springboot bookstore application
 
 ## References
