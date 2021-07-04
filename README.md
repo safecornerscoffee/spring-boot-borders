@@ -68,8 +68,8 @@ springboot bookstore application
 ### Travis-CI
 
 - [x] [Setting up a CI/CD Process on GitHub with Travis CI](https://blog.travis-ci.com/2019-05-30-setting-up-a-ci-cd-process-on-github)
-- [ ] [Travis-CI Build Stages](https://docs.travis-ci.com/user/build-stages/)
-- [ ] [Travis-CI Conditional Builds, Stages and Jobs](https://docs.travis-ci.com/user/conditional-builds-stages-jobs/)
+- [x] [Travis-CI Build Stages](https://docs.travis-ci.com/user/build-stages/)
+- [x] [Travis-CI Conditional Builds, Stages and Jobs](https://docs.travis-ci.com/user/conditional-builds-stages-jobs/)
 
 ### Test Coverage
 
