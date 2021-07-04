@@ -65,6 +65,12 @@ springboot bookstore application
 - [x] [jUnit과 Mockito를 이용한 단위테스트 기초](https://redskelt.github.io/junit/mockito/2017/06/22/junit04.html)
 - [x] [Mockito @Mock @MockBean @Spy @SpyBean 차이점 정리](https://cobbybb.tistory.com/16)
 
+### Travis-CI
+
+- [x] [Setting up a CI/CD Process on GitHub with Travis CI](https://blog.travis-ci.com/2019-05-30-setting-up-a-ci-cd-process-on-github)
+- [ ] [Travis-CI Build Stages](https://docs.travis-ci.com/user/build-stages/)
+- [ ] [Travis-CI Conditional Builds, Stages and Jobs](https://docs.travis-ci.com/user/conditional-builds-stages-jobs/)
+
 ### Test Coverage
 
 - [ ] [코드 분석 도구 적용기 - 1편, 코드 커버리지(Code Coverage)가 뭔가요?](https://velog.io/@lxxjn0/%EC%BD%94%EB%93%9C-%EB%B6%84%EC%84%9D-%EB%8F%84%EA%B5%AC-%EC%A0%81%EC%9A%A9%EA%B8%B0-1%ED%8E%B8-%EC%BD%94%EB%93%9C-%EC%BB%A4%EB%B2%84%EB%A6%AC%EC%A7%80Code-Coverage%EA%B0%80-%EB%AD%94%EA%B0%80%EC%9A%94)
