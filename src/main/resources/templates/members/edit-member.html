@@ -12,7 +12,7 @@
             <aside th:replace="fragments/menu :: menu"></aside>
         </div>
         <div class="column is-12-tablet is-10-desktop is-10-widescreen">
-            <form method="post" th:action="@{/members/{id}/edit (id=*{id})}" th:object="${editMemberForm}">
+            <form method="post" th:action="@{/members/{id}/edit (id=*{id})}" th:object="${updateMemberForm}">
                 <input th:field="*{id}" type="hidden">
 
                 <div class="field">

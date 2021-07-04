@@ -8,7 +8,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class EditMemberForm {
+public class UpdateMemberForm {
     private Long id;
     private String email;
     private String password;
@@ -18,7 +18,7 @@ public class EditMemberForm {
     private String zipcode;
 
     @Builder
-    public EditMemberForm(Long id, String email, String password, String name, String city, String street, String zipcode) {
+    public UpdateMemberForm(Long id, String email, String password, String name, String city, String street, String zipcode) {
         this.id = id;
         this.email = email;
         this.password = password;

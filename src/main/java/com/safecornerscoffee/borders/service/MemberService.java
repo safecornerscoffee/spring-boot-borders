@@ -1,6 +1,6 @@
 package com.safecornerscoffee.borders.service;
 
-import com.safecornerscoffee.borders.data.EditMemberForm;
+import com.safecornerscoffee.borders.data.UpdateMemberForm;
 import com.safecornerscoffee.borders.domain.Address;
 import com.safecornerscoffee.borders.domain.Member;
 import com.safecornerscoffee.borders.exception.DuplicateMemberException;
@@ -29,7 +29,7 @@ public class MemberService {
     }
 
     @Transactional
-    public void updateMember(Long memberId, EditMemberForm dto) {
+    public void updateMember(Long memberId, UpdateMemberForm dto) {
         Member member = memberRepository.findOne(memberId);
         member.setEmail(dto.getEmail());
         if (!dto.getPassword().equals(member.getPassword())) {
