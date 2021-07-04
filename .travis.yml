@@ -18,6 +18,6 @@ jobs:
 
 stages:
   - name: test
-  - name: deploy
+  - name: build
 
 
