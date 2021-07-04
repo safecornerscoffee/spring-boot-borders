@@ -6,13 +6,13 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class UpdateItemRequest {
+public class UpdateItemForm {
     private String name;
     private int price;
     private int stockQuantity;
 
     @Builder
-    public UpdateItemRequest(String name, int price, int stockQuantity) {
+    public UpdateItemForm(String name, int price, int stockQuantity) {
         this.name = name;
         this.price = price;
         this.stockQuantity = stockQuantity;

@@ -1,12 +1,11 @@
 package com.safecornerscoffee.borders.controller;
 
 import com.safecornerscoffee.borders.data.BookForm;
-import com.safecornerscoffee.borders.data.UpdateItemRequest;
+import com.safecornerscoffee.borders.data.UpdateItemForm;
 import com.safecornerscoffee.borders.domain.item.Book;
 import com.safecornerscoffee.borders.domain.item.Item;
 import com.safecornerscoffee.borders.service.ItemService;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,7 +23,7 @@ public class ItemController {
     @GetMapping(value = "/items/new")
     public String createForm(Model model) {
         model.addAttribute("form", new BookForm());
-        return "items/createItemForm";
+        return "items/create-item";
     }
 
     @PostMapping(value = "/items/new")
@@ -48,7 +47,7 @@ public class ItemController {
 
         model.addAttribute("items", items);
 
-        return "items/itemList";
+        return "items/items";
     }
 
     @GetMapping(value = "/items/{itemId}/edit")
@@ -67,21 +66,20 @@ public class ItemController {
 
         model.addAttribute("form", form);
 
-        return "items/updateItemForm";
+        return "items/edit-item";
     }
 
     @PostMapping(value = "/items/{itemId}/edit")
     public String updateItem(@PathVariable("itemId") Long itemId, @ModelAttribute("form") BookForm bookForm) {
 
-        UpdateItemRequest updateItemRequest = UpdateItemRequest.builder()
+        UpdateItemForm updateItemForm = UpdateItemForm.builder()
                 .name(bookForm.getName())
                 .price(bookForm.getPrice())
                 .stockQuantity(bookForm.getStockQuantity())
                 .build();
 
-        itemService.updateItem(itemId, updateItemRequest);
+        itemService.updateItem(itemId, updateItemForm);
 
         return "redirect:/items";
     }
-
 }

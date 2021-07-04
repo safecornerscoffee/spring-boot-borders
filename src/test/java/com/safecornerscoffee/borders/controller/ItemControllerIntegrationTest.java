@@ -33,7 +33,7 @@ public class ItemControllerIntegrationTest {
     public void itemList() throws Exception {
         mockMvc.perform(get("/items"))
                 .andDo(print())
-                .andExpect(view().name("items/itemList"));
+                .andExpect(view().name("items/items"));
     }
 
     @Test
@@ -41,7 +41,7 @@ public class ItemControllerIntegrationTest {
         mockMvc.perform(get("/items/new"))
                 .andDo(print())
                 .andExpect(model().attributeExists("form"))
-                .andExpect(view().name("items/createItemForm"));
+                .andExpect(view().name("items/create-item"));
     }
 
     @Test
