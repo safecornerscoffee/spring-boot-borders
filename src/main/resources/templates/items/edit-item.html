@@ -14,6 +14,16 @@
             <aside th:replace="fragments/menu :: menu"></aside>
         </div>
         <div class="column">
+            <nav class="breadcrumb">
+                <ul>
+                    <li>
+                        <a href="/상품"></a>
+                    </li>
+                    <li class="is-active">
+                        <a href="/items/edit">상품 수정</a>
+                    </li>
+                </ul>
+            </nav> <!-- breadcrumb -->
 
             <form method="post" th:action="@{/items/{id}/edit (id=*{id})}" th:object="${form}">
                 <input th:field="*{id}" type="hidden">
@@ -55,12 +65,11 @@
 
                 <div class="field">
                     <div class="buttons">
-                        <button class="button is-medium is-success" type="submit">Create book</button>
-                        <a class="button is-medium is-light" href="/items">Cancel</a>
+                        <button class="button is-medium is-success" type="submit">등록</button>
+                        <a class="button is-medium is-light" href="/items">취소</a>
                     </div>
                 </div>
             </form>
-
         </div>
     </div>
 </section><!--section-->
