@@ -34,10 +34,12 @@ public class SessionServiceIntegrationTest {
     @Test
     public void signIn() {
         //given
+        String email = "mocha@safecorners.io";
+        String password = "mocha";
         memberService.join(member);
 
         //when
-        Member signedMember = sessionService.signIn(member.getEmail(), member.getPassword());
+        Member signedMember = sessionService.signIn(email, password);
 
         //then
         assertThat(signedMember.getEmail()).isEqualTo(member.getEmail());

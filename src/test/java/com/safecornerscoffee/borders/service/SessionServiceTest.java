@@ -2,6 +2,9 @@ package com.safecornerscoffee.borders.service;
 
 import com.safecornerscoffee.borders.domain.Address;
 import com.safecornerscoffee.borders.domain.Member;
+import com.safecornerscoffee.borders.helper.BcryptPasswordEncoder;
+import com.safecornerscoffee.borders.helper.PasswordEncoder;
+import com.safecornerscoffee.borders.helper.StubPasswordEncoder;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,8 +24,8 @@ public class SessionServiceTest {
 
     @Mock
     MemberService memberService;
-    @Spy
-    PasswordEncoder passwordEncoder = new StubPasswordEncoder();
+    @Mock
+    PasswordEncoder passwordEncoder;
 
     Address address;
     Member member;
@@ -37,12 +40,14 @@ public class SessionServiceTest {
     public void signIn() {
         //given
         given(memberService.findOneByEmail(member.getEmail())).willReturn(member);
+        given(passwordEncoder.compareHashAndPassword(anyString(), anyString())).willReturn(true);
 
         //when
         Member signedMember = sessionService.signIn(member.getEmail(), member.getPassword());
 
         //then
         then(memberService).should().findOneByEmail(anyString());
+        then(passwordEncoder).should().compareHashAndPassword(anyString(), anyString());
         assertThat(signedMember).isNotNull();
         assertThat(signedMember.getEmail()).isEqualTo(member.getEmail());
     }
