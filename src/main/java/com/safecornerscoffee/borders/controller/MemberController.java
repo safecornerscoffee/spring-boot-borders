@@ -56,6 +56,7 @@ public class MemberController {
                 .id(member.getId())
                 .email(member.getEmail())
                 .password(member.getPassword())
+                .name(member.getName())
                 .city(member.getAddress().getCity())
                 .street(member.getAddress().getStreet())
                 .zipcode(member.getAddress().getZipcode())

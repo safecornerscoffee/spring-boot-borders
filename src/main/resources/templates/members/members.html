@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header">
+    <meta charset="UTF-8">
+    <title>Borders</title>
+</head>
+<body>
+
+<div th:replace="fragments/bodyHeader :: bodyHeader "></div>
+
+<section class="section">
+    <div class="columns">
+        <div class="column is-4-tablet is-3-desktop is-2-widescreen">
+            <aside th:replace="fragments/menu :: menu"></aside>
+        </div>
+        <div class="column">
+            <h1 class="title">사용자</h1>
+
+            <nav class="level">
+                <div class="level-left">
+                    <p class="level-item">
+                        <a class="button is-success" href="/members/new">등록</a>
+                    </p>
+
+                    <div class="level-item is-hidden-tablet-only">
+                        <div class="field has-addons">
+                            <p class="control">
+                                <input class="input" placeholder="Member #, Email..." type="text">
+                            </p>
+                            <p class="control">
+                                <button class="button">Search</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="level-right">
+                    <div class="level-item">
+                        Order by
+                    </div>
+                    <div class="level-item">
+                        <div class="select">
+                            <select>
+                                <option>-</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </nav><!-- toolbar -->
+
+            <table class="table is-hoverable is-fullwidth">
+                <thead>
+                <tr>
+                    <th class="is-narrow">#</th>
+                    <th>Email</th>
+                    <th>이름</th>
+                    <th>도시</th>
+                    <th>주소</th>
+                    <th>우편번호</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="member : ${members}">
+                    <td>
+                        <a th:href="@{/members/{id}/edit (id=${member.id})}" th:text="${member.id}"></a>
+                    </td>
+                    <td>
+                        <a th:href="@{/members/{id}/edit (id=${member.id})}" th:text="${member.email}"></a>
+                    </td>
+                    <td th:text="${member.name}"></td>
+                    <td th:text="${member.address?.city}"></td>
+                    <td th:text="${member.address?.street}"></td>
+                    <td th:text="${member.address?.zipcode}"></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <nav th:replace="fragments/pagination :: pagination">
+            </nav>
+        </div>
+    </div>
+</section><!--section-->
+
+
+<footer th:replace="fragments/footer :: footer"></footer>
+
+</body>
+</html>
