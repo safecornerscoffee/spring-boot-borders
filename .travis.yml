@@ -19,5 +19,6 @@ jobs:
 stages:
   - name: test
   - name: build
+    if: branch = master
 
 
