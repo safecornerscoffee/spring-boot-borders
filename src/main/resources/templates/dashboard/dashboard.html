@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+<div class="navbar has-shadow">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+            <img src="images/logo.png">
+        </a>
+        <div class="navbar-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div><!-- navbar-brand -->
+
+    <div class="navbar-menu">
+        <div class="navbar-start">
+            <div class="navbar-item">
+                <small>Publishing at the speed of technology</small>
+            </div>
+        </div>
+
+        <div class="navbar-end">
+            <div class="navbar-item has-dropdown is-hoverable">
+                <div class="navbar-link">
+                    Mocha
+                </div>
+                <div class="navbar-dropdown is-right">
+                    <a class="navbar-item" href="#">
+                        <div>
+                <span class="icon is-mall">
+                  <i class="fa fa-user"></i>
+                </span>
+                            Profile
+                        </div>
+                    </a>
+                    <a class="navbar-item">
+                        <div>
+                <span class="icon is-small">
+                  <i class="fa fa-bug"></i>
+                </span>
+                            Report bug
+                        </div>
+                    </a>
+                    <a class="navbar-item" href="#">
+                        <div>
+                <span class="icon is-small">
+                  <i class="fas fa-sign-out-alt"></i>
+                </span>
+                            Sign Out
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div><!-- navbar-menu -->
+</div><!-- navbar -->
+
+<section class="section">
+    <div class="columns">
+        <div class="column is-4-tablet is-3-desktop is-2-widescreen">
+            <nav class="menu">
+                <p class="label">
+                    Menu
+                </p>
+                <ul class="menu-list">
+                    <li>
+                        <a class="is-active" href="dashboard.html">
+                <span class="icon">
+                  <i class="fas fa-tachometer-alt"></i>
+                </span>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="books.html">
+                <span class="icon">
+                  <i class="fas fa-book"></i>
+                </span>
+                            Books
+                        </a>
+                    </li>
+                    <li>
+                        <a href="customers.html">
+                <span class="icon">
+                  <i class="fas fa-address-book"></i>
+                </span>
+                            Customers
+                        </a>
+                    </li>
+                    <li>
+                        <a href="orders.html">
+                <span class="icon">
+                  <i class="fas fa-file-alt"></i>
+                </span>
+                            Orders
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div><!-- sidebar-->
+        <div class="column">
+            <div class="level">
+                <div class="level-left">
+                    <h1 class="subtitle is-3">
+                        <span class="has-text-grey-light">Hello</span> <Strong>Alex Johnson</Strong>
+                    </h1>
+                </div>
+                <div class="level-right">
+                    <div class="select">
+                        <select>
+                            <option>Today</option>
+                            <option>Yesterday</option>
+                            <option>This Week</option>
+                            <option selected>This Month</option>
+                            <option>This Year</option>
+                            <option>All time</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns is-multiline">
+                <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+                    <div class="notification is-link has-text">
+                        <p class="title is-1">232</p>
+                        <p class="subtitle is-4">Orders</p>
+                    </div>
+                </div>
+                <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+                    <div class="notification is-info has-text">
+                        <p class="title is-1">$7,648</p>
+                        <p class="subtitle is-4">Revenue</p>
+                    </div>
+                </div>
+                <div class="column is-12-table is-6-desktop is-3-widescreen">
+                    <div class="notification is-primary has-text">
+                        <p class="title is-1">1,678</p>
+                        <p class="subtitle is-4">Visitors</p>
+                    </div>
+                </div>
+                <div class="column is-12-tablet is-6-desktop is-3-widescreen">
+                    <div class="notification is-success has-text">
+                        <p class="title is-1">20,756</p>
+                        <p class="subtitle is-4">Pageviews</p>
+                    </div>
+                </div>
+
+                <div class="column is-12-tablet is-6-desktop is-4-fullhd">
+                    <div class="card">
+                        <div class="card-content">
+                            <h2 class="title is-4">
+                                Latest orders
+                            </h2>
+
+                            <div class="level">
+                                <div class="level-left">
+                                    <div>
+                                        <p class="title is-5 is-marginless">
+                                            <a href="edit-order.html">787352</a>
+                                        </p>
+                                        <small>
+                                            Nov 18, 17:38 by <a href="edit-customer.html">John Miller</a>
+                                        </small>
+                                    </div>
+                                </div>
+                                <div class="level-right">
+                                    <div class="has-text-right">
+                                        <p class="title is-5 is-marginless">
+                                            $56.98
+                                        </p>
+                                        <span class="tag is-warning">In progress</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="button is-link is-outlined" href="orders.html">View All</a>
+                        </div>
+                    </div>
+                </div> <!--latest-orders-->
+
+                <div class="column is-12-tablet is-6-desktop is-4-fullhd">
+                    <div class="card">
+                        <div class="card-content">
+                            <h2 class="title is-4">
+                                Most popular books
+                            </h2>
+
+                            <div class="media">
+                                <div class="media-left is-marginless">
+                                    <p class="number">1</p>
+                                </div>
+                                <div class="media-left">
+                                    <img src="images/swift.jpg" width="40">
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-5 is-spaced is-marginless">
+                                        <a href="edit-book.html">Learning Swift</a>
+                                    </p>
+                                </div>
+                                <div class="media-right">
+                                    146 sold
+                                </div>
+                            </div><!--media-->
+
+                            <div class="media">
+                                <div class="media-left is-marginless">
+                                    <p class="number">2</p>
+                                </div>
+                                <div class="media-left">
+                                    <img src="images/tensorflow.jpg" width="40">
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-5 is-spaced is-marginless">
+                                        <a href="edit-book.html">TensorFlow For Machine Intelligence</a>
+                                    </p>
+                                </div>
+                                <div class="media-right">
+                                    56 Sold
+                                </div>
+                            </div><!--media-->
+
+                            <div class="media">
+                                <div class="media-left is-marginless">
+                                    <p class="number">3</p>
+                                </div>
+                                <div class="media-left">
+                                    <img src="images/js-framework.jpg" width="40">
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-5 is-spaced is-marginless">
+                                        <a href="edit-book.html">Choosing a JavaScript Framework</a>
+                                    </p>
+                                </div>
+                                <div class="media-right">
+                                    47 Sold
+                                </div>
+                            </div><!--media-->
+
+                            <a class="button is-link is-outlined" href="books.html">View all books</a>
+                        </div><!--card-content-->
+                    </div> <!--card-->
+                </div> <!--popular-books-->
+
+                <div class="column is-12-tablet is-6-desktop is-4-fullhd">
+                    <div class="card">
+                        <div class="card-content">
+                            <h1 class="title is-4">Most loyal customers</h1>
+
+                            <div class="media">
+                                <div class="media-left is-marginless">
+                                    <p class="number">1</p>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-5 is-spaced is-marginless">
+                                        <a href="edit-customer.html">John Miller</a>
+                                    </p>
+                                    <p class="subtitile is-6">
+                                        United States
+                                    </p>
+                                </div>
+                                <div class="media-right">
+                                    7 orders
+                                </div>
+                            </div><!--media-->
+
+                            <div class="media">
+                                <div class="media-left is-marginless">
+                                    <p class="number">2</p>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-5 is-spaced is-marginless">
+                                        <a href="edit-customer.html">Samantha Rogers</a>
+                                    </p>
+                                    <p class="subtitle is-6">
+                                        United Kingdom
+                                    </p>
+                                </div>
+                                <div class="media-right">
+                                    5 Orders
+                                </div>
+                            </div><!--media-->
+
+                            <div class="media">
+                                <div class="media-left is-marginless">
+                                    <p class="number">3</p>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-5 is-spaced is-marginless">
+                                        <a href="edit-customer.html">Paul Jacques</a>
+                                    </p>
+                                    <p class="subtitle is-6">
+                                        Canada
+                                    </p>
+                                </div>
+                                <div class="media-right">
+                                    2 Orders
+                                </div>
+                            </div><!--media-->
+
+                            <a class="button is-link is-outlined" href="customers.html">View all customers</a>
+                        </div><!--card-content-->
+                    </div><!--card-->
+                </div>
+            </div> <!-- columns-->
+
+        </div><!-- main -->
+    </div>
+</section>
+</body>
+</html>

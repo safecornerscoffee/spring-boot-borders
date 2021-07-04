@@ -13,20 +13,36 @@
             <aside th:replace="fragments/menu :: menu"></aside>
         </div>
         <div class="column">
+            <h1 class="title">주문</h1>
 
-            <div>
-                <form th:object="${orderSearch}">
-                    <div class="field">
-                        <div class="control">
-                            <input class="input" th:field="*{memberName}" type="text"/>
+            <form th:object="${orderSearch}">
+                <nav class="level">
+                    <div class="level-left">
+                        <div class="level-item">
+                            <p class="subtitle is-5">
+                                <strong th:text="${orders.size()}">2</strong> 주문
+                            </p>
+                        </div>
+
+                        <div class="level-item is-hidden-tablet-only">
+                            <div class="field has-addons">
+                                <p class="control">
+                                    <input class="input" placeholder="Order #, MemberName" th:field="*{memberName}"  type="text">
+                                </p>
+                                <p class="control">
+                                    <button class="button">검색</button>
+                                </p>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="field">
-                        <div class="control">
+                    <div class="level-right">
+                        <div class="level-tiem">
+                            주문 상태
+                        </div>
+                        <div class="level-item">
                             <div class="select">
                                 <select th:field="*{orderStatus}">
-                                    <option value="">주문상태</option>
+                                    <option value="">선택</option>
                                     <option th:each="status : ${T(com.safecornerscoffee.borders.domain.order.OrderStatus).values()}"
                                             th:text="${status}"
                                             th:value="${status}">option
@@ -35,14 +51,11 @@
                             </div>
                         </div>
                     </div>
+                </nav>
+            </form>
 
-                    <div class="field">
-                        <button class="button" type="submit">Search</button>
-                    </div>
-                </form>
-            </div>
 
-            <table class="table">
+            <table class="table is-hoverable is-fullwidth">
                 <thead>
                 <tr>
                     <th>#</th>
@@ -69,13 +82,14 @@
                            href="#" th:href="'javascript:cancel('+${order.id}+')'"
                            th:if="${order.status.name() == 'ORDER'}"
                         >
-                            Cancel
+                            취소
                         </a>
                     </td>
                 </tr>
                 </tbody>
             </table>
 
+            <nav th:replace="fragments/pagination :: pagination"></nav>
         </div>
     </div>
 </section><!--section-->
