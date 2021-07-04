@@ -8,7 +8,21 @@
 
 <section class="section">
   <div class="columns is-centered">
+    <div class="column is-4-tablet is-3-desktop is-2-widescreen">
+      <aside th:replace="fragments/menu :: menu"></aside>
+    </div>
     <div class="column is-12-tablet is-10-desktop is-10-widescreen">
+      <nav class="breadcrumb">
+        <ul>
+          <li>
+            <a href="/members/">사용자</a>
+          </li>
+          <li class="is-active">
+            <a href="/members/new">사용자 등록</a>
+          </li>
+        </ul>
+      </nav> <!-- breadcrumb -->
+
       <form action="/members/new" method="post" th:object="${signUpForm}">
         <div class="field">
           <label class="label" th:for="email">이메일</label>

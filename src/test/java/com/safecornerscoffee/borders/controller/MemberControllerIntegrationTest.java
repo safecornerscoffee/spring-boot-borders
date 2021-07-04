@@ -31,7 +31,7 @@ public class MemberControllerIntegrationTest {
         mockMvc.perform(get("/members/new"))
                 .andDo(print())
                 .andExpect(model().attributeExists("signUpForm"))
-                .andExpect(view().name("members/createMemberForm"));
+                .andExpect(view().name("members/create-member"));
     }
 
     @Test
@@ -40,12 +40,8 @@ public class MemberControllerIntegrationTest {
 
         mockMvc.perform(signUpRequest)
                 .andDo(print())
-                .andExpect(redirectedUrl("/"));
-
-    }
-
-    @Test
-    public void redirectWhenEmailIsEmpty() {
+                .andExpect(status().is3xxRedirection())
+                .andExpect(redirectedUrl("/members"));
 
     }
 
@@ -54,10 +50,9 @@ public class MemberControllerIntegrationTest {
         mockMvc.perform(get("/members"))
                 .andDo(print())
                 .andExpect(model().attributeExists("members"))
-                .andExpect(view().name("members/memberList"));
+                .andExpect(view().name("members/members"));
 
     }
-
 
     private MockHttpServletRequestBuilder signUpRequest() {
         return post("/members/new").contentType(MediaType.APPLICATION_FORM_URLENCODED)

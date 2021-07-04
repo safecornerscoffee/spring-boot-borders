@@ -1,5 +1,6 @@
 package com.safecornerscoffee.borders.controller;
 
+import com.safecornerscoffee.borders.data.UpdateMemberForm;
 import com.safecornerscoffee.borders.data.SignUpForm;
 import com.safecornerscoffee.borders.domain.Address;
 import com.safecornerscoffee.borders.domain.Member;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
@@ -23,14 +25,14 @@ public class MemberController {
     @GetMapping(value = "/members/new")
     public String createForm(Model model) {
         model.addAttribute("signUpForm", new SignUpForm());
-        return "members/createMemberForm";
+        return "members/create-member";
     }
 
     @PostMapping(value = "/members/new")
     public String create(@Valid SignUpForm dto, BindingResult result) {
 
         if (result.hasErrors()) {
-            return "members/createMemberForm";
+            return "members/create-member";
         }
 
         // todo MemberAssembler
@@ -44,7 +46,37 @@ public class MemberController {
 
         memberService.join(member);
 
-        return "redirect:/";
+        return "redirect:/members";
+    }
+
+    @GetMapping("/members/{memberId}/edit")
+    public String editForm(@PathVariable Long memberId, Model model) {
+        Member member = memberService.findOne(memberId);
+        UpdateMemberForm updateMemberForm = UpdateMemberForm.builder()
+                .id(member.getId())
+                .email(member.getEmail())
+                .password(member.getPassword())
+                .name(member.getName())
+                .city(member.getAddress().getCity())
+                .street(member.getAddress().getStreet())
+                .zipcode(member.getAddress().getZipcode())
+                .build();
+
+        model.addAttribute("updateMemberForm", updateMemberForm);
+
+        return "members/edit-member";
+    }
+
+    @PostMapping("/members/{memberId}/edit")
+    public String edit(@PathVariable Long memberId, @Valid UpdateMemberForm dto, BindingResult result) {
+
+        if (result.hasErrors()) {
+            return "members/edit-member";
+        }
+
+        memberService.updateMember(memberId, dto);
+
+        return "redirect:/members";
     }
 
     @GetMapping(value = "/members")
@@ -52,6 +84,6 @@ public class MemberController {
         List<Member> members = memberService.findMembers();
         model.addAttribute("members", members);
 
-        return "members/memberList";
+        return "members/members";
     }
 }

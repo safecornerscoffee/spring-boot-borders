@@ -51,7 +51,7 @@ springboot bookstore application
 - [x] [단위 테스트 vs 통합 테스트 vs 인수 테스트](https://woowacourse.github.io/javable/post/2021-05-25-unit-test-vs-integration-test-vs-acceptance-test/)
 - [x] [테스트 코드 작성에 대한 나름의 고찰](https://cheese10yun.github.io/spring-about-test/)
 - [x] [**우아한테크코스 Guide to Javable**](https://velog.io/@lxxjn0/series/Javable)
-- [ ] [TDD 발담그기](https://javacan.tistory.com/entry/Feel-TDD-at-gong-gam-seminar?category=454313)
+- [x] [TDD 발담그기](https://javacan.tistory.com/entry/Feel-TDD-at-gong-gam-seminar?category=454313)
 - [ ] [자바 플레이그라운드 with TDD, 클린코드 ](https://edu.nextstep.camp/c/9WPRB0ys/)
 
 ### Mockito
