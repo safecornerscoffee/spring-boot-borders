@@ -74,15 +74,7 @@ public class MemberController {
             return "members/edit-member";
         }
 
-        Address address = new Address(dto.getCity(), dto.getStreet(), dto.getZipcode());
-        Member member = Member.builder()
-                .email(dto.getEmail())
-                .password(dto.getPassword())
-                .name(dto.getName())
-                .address(address)
-                .build();
-
-        memberService.update(member);
+        memberService.updateMember(memberId, dto);
 
         return "redirect:/members";
     }
