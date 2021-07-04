@@ -12,6 +12,17 @@
             <aside th:replace="fragments/menu :: menu"></aside>
         </div>
         <div class="column is-12-tablet is-10-desktop is-10-widescreen">
+            <nav class="breadcrumb">
+                <ul>
+                    <li>
+                        <a href="/members">사용자</a>
+                    </li>
+                    <li class="is-active">
+                        <a href="/members/edit">사용자 수정</a>
+                    </li>
+                </ul>
+            </nav> <!-- breadcrumb -->
+
             <form method="post" th:action="@{/members/{id}/edit (id=*{id})}" th:object="${updateMemberForm}">
                 <input th:field="*{id}" type="hidden">
 

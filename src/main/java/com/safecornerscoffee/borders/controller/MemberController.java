@@ -62,7 +62,7 @@ public class MemberController {
                 .zipcode(member.getAddress().getZipcode())
                 .build();
 
-        model.addAttribute("editMemberForm", updateMemberForm);
+        model.addAttribute("updateMemberForm", updateMemberForm);
 
         return "members/edit-member";
     }
