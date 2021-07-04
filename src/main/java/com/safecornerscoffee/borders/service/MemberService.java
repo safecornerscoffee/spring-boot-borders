@@ -26,6 +26,11 @@ public class MemberService {
         return member.getId();
     }
 
+    @Transactional
+    public Member update(Member member) {
+        return null;
+    }
+
     private void validateDuplicateMember(Member member) {
         List<Member> findMembers = memberRepository.findByEmail(member.getEmail());
         if (!findMembers.isEmpty()) {

@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.validation.Valid;
@@ -23,14 +24,14 @@ public class MemberController {
     @GetMapping(value = "/members/new")
     public String createForm(Model model) {
         model.addAttribute("signUpForm", new SignUpForm());
-        return "members/createMemberForm";
+        return "members/create-member";
     }
 
     @PostMapping(value = "/members/new")
     public String create(@Valid SignUpForm dto, BindingResult result) {
 
         if (result.hasErrors()) {
-            return "members/createMemberForm";
+            return "members/create-member";
         }
 
         // todo MemberAssembler
@@ -44,7 +45,35 @@ public class MemberController {
 
         memberService.join(member);
 
-        return "redirect:/";
+        return "redirect:/members";
+    }
+
+    @GetMapping("/members/{memberId}/edit")
+    public String editForm(@PathVariable Long memberId, Model model) {
+        Member member = memberService.findOne(memberId);
+        model.addAttribute("member", member);
+
+        return "members/edit-member";
+    }
+
+    @PostMapping("/members/{memberId}/edit")
+    public String edit(@PathVariable Long memberId, @Valid SignUpForm dto, BindingResult result) {
+
+        if (result.hasErrors()) {
+            return "members/edit-member";
+        }
+
+        Address address = new Address(dto.getCity(), dto.getStreet(), dto.getZipcode());
+        Member member = Member.builder()
+                .email(dto.getEmail())
+                .password(dto.getPassword())
+                .name(dto.getName())
+                .address(address)
+                .build();
+
+        memberService.update(member);
+
+        return "redirect:/members";
     }
 
     @GetMapping(value = "/members")
@@ -52,6 +81,6 @@ public class MemberController {
         List<Member> members = memberService.findMembers();
         model.addAttribute("members", members);
 
-        return "members/memberList";
+        return "members/members";
     }
 }
