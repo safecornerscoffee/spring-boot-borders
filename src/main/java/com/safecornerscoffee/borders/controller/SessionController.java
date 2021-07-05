@@ -9,10 +9,12 @@ import com.safecornerscoffee.borders.service.SessionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 
 @Controller
 @RequiredArgsConstructor
@@ -43,7 +45,11 @@ public class SessionController {
     }
 
     @PostMapping("/signup")
-    public String signUp(SignUpForm dto, HttpSession httpSession) {
+    public String signUp(@Valid SignUpForm dto, HttpSession httpSession, BindingResult result) {
+
+        if (result.hasErrors()) {
+            return "signup/signup";
+        }
 
         Member member = Member.builder()
                 .email(dto.getEmail())
