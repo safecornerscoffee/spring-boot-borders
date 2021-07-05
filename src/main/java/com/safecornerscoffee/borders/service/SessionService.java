@@ -30,6 +30,7 @@ public class SessionService {
         }
     }
 
+    @Transactional
     public Member signUp(Member member) {
         Long memberId = memberService.join(member);
         return memberService.findOne(memberId);
