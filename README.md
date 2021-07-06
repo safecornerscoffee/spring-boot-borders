@@ -6,12 +6,16 @@ springboot bookstore application
 ## References
 - [생산성 향상 비기는 없다](https://cheese10yun.github.io/productivity/)
 - [Class BDDMockito](https://javadoc.io/static/org.mockito/mockito-core/3.11.2/org/mockito/BDDMockito.html)
+- [Spring-Security 19.Testing](https://docs.spring.io/spring-security/site/docs/5.3.2.RELEASE/reference/html5/#test)
+- [Setting Up MockMvc and Spring Security](https://docs.spring.io/spring-security/site/docs/4.0.4.RELEASE/reference/html/test-mockmvc.html)
 
 ### Thymeleaf
 - [x] [Thymeleaf Standard Expression Syntax](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#standard-expression-syntax)
 - [x] [Thymeleaf Expression Basic Objects](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#appendix-a-expression-basic-objects)
 - [x] [Thymeleaf Page layouts](https://www.thymeleaf.org/doc/articles/layouts.html)
 - [x] [Thymeleaf Examples: Layouts](https://github.com/thymeleaf/thymeleafexamples-layouts)
+- [ ] [Introduction to Using Thymeleaf in Spring](https://www.baeldung.com/thymeleaf-in-spring-mvc)
+- [ ] [Thymeleaf + Spring](https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html)
 
 ### Lombok
 - [x] [실무에서 Lombok 사용법](https://cheese10yun.github.io/lombok/)
@@ -19,20 +23,29 @@ springboot bookstore application
 - [x] [Builder 기반으로 객체를 안전하게 생성하는 방법](https://cheese10yun.github.io/spring-builder-pattern/)
 
 ### JPA
+
 - [ ] [JPA 기반 테스트 코드 작성 팁](https://cheese10yun.github.io/jpa-test-support/)
 - [ ] [JPA 선호하는 패턴](https://cheese10yun.github.io/jpa-preference/)
 - [ ] [JPA Best Practices](https://github.com/cheese10yun/spring-jpa-best-practices)
 
 ### Spring Security
 
-- [ ] [Spring Security Session과 CSRF](https://changrea.io/spring/spring-security-session-csrf/)
+- [ ] [Introduction to Spring Method Security](https://www.baeldung.com/spring-security-method-security)
+- [ ] [Spring Security Session and CSRF](https://changrea.io/spring/spring-security-session-csrf/)
 - [ ] [Sprint Security Session](https://taes-k.github.io/2019/06/12/spring-security-1/)
 - [ ] [Spring Security 파헤치기](https://sjh836.tistory.com/165)
+- [ ] [Spring Security 간단 설정과 예제](https://galid1.tistory.com/576)
+
+### Spring Security Test
+
+- [x] [Setting Up MockMvc and Spring Security](https://docs.spring.io/spring-security/site/docs/4.0.4.RELEASE/reference/html/test-mockmvc.html)
+- [x] [Spring Security for Spring Boot Integration Tests](https://www.baeldung.com/spring-security-integration-tests)
+- [ ] [Spring-Security 19. Testing kr](https://godekdls.github.io/Spring%20Security/testing/)
+- [x] [Spring Security 기반의 테스트 코드 작성하기](https://seokr.tistory.com/820)
 
 ### Spring Validator
 
 - [ ] [ConstraintValidator를 이용해서 효과적인 검증](https://cheese10yun.github.io/ConstraintValidator/)
-
 
 ### CI/CD
 
@@ -72,6 +85,7 @@ springboot bookstore application
 - [x] [Travis-CI Build Stages](https://docs.travis-ci.com/user/build-stages/)
 - [x] [Travis-CI Conditional Builds, Stages and Jobs](https://docs.travis-ci.com/user/conditional-builds-stages-jobs/)
 - [ ] [Travis-CI Using Docker in Builds](https://docs.travis-ci.com/user/docker/#using-docker-compose)
+
 ### Test Coverage
 
 - [ ] [코드 분석 도구 적용기 - 1편, 코드 커버리지(Code Coverage)가 뭔가요?](https://velog.io/@lxxjn0/%EC%BD%94%EB%93%9C-%EB%B6%84%EC%84%9D-%EB%8F%84%EA%B5%AC-%EC%A0%81%EC%9A%A9%EA%B8%B0-1%ED%8E%B8-%EC%BD%94%EB%93%9C-%EC%BB%A4%EB%B2%84%EB%A6%AC%EC%A7%80Code-Coverage%EA%B0%80-%EB%AD%94%EA%B0%80%EC%9A%94)

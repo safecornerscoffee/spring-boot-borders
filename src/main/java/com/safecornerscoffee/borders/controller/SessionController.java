@@ -28,16 +28,6 @@ public class SessionController {
         return "signin/signin";
     }
 
-    @PostMapping("/signin")
-    public String signIn(SignInForm dto, HttpSession httpSession) {
-
-        Member member = sessionService.signIn(dto.getEmail(), dto.getPassword());
-
-        httpSession.setAttribute("member", member);
-
-        return "redirect:/";
-    }
-
     @GetMapping("/signup")
     public String signUpForm(Model model) {
         model.addAttribute("signUpForm", new SignUpForm());
@@ -65,9 +55,4 @@ public class SessionController {
         return "redirect:/";
     }
 
-    @PostMapping("/logout")
-    public String logout(HttpSession httpSession) {
-        httpSession.invalidate();
-        return "redirect:/";
-    }
 }

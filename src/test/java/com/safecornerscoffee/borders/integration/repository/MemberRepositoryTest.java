@@ -1,8 +1,7 @@
-package com.safecornerscoffee.borders.service;
+package com.safecornerscoffee.borders.integration.repository;
 
 import com.safecornerscoffee.borders.domain.Address;
 import com.safecornerscoffee.borders.domain.Member;
-import com.safecornerscoffee.borders.exception.DuplicateMemberException;
 import com.safecornerscoffee.borders.repository.MemberRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,38 +15,43 @@ import static org.assertj.core.api.Assertions.*;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @Transactional
-public class MemberServiceIntegrationTest {
+public class MemberRepositoryTest {
 
-    @Autowired
-    MemberService memberService;
     @Autowired
     MemberRepository memberRepository;
 
     @Test
-    public void joinTest() {
+    public void createMember() {
         //given
         Address address = Address.builder().city("city").street("street").zipcode("zipcode").build();
         Member member = Member.builder().email("mocha@safecorners.io").password("mocha").name("mocha").address(address).build();
 
         //when
-        Long savedId = memberService.join(member);
+        memberRepository.save(member);
 
         //then
-        Member savedMember = memberRepository.findOne(member.getId());
-        assertThat(savedMember).isEqualTo(member);
+        Member findMember = memberRepository.findOne(member.getId());
+
+        assertThat(findMember.getId()).isEqualTo(member.getId());
+        assertThat(findMember).isEqualTo(member);
+        assertThat(findMember).isSameAs(member);
     }
 
     @Test
-    public void duplicateMemberExceptionTest() {
+    public void findOneByEmail() {
         //given
         Address address = Address.builder().city("city").street("street").zipcode("zipcode").build();
         Member member = Member.builder().email("mocha@safecorners.io").password("mocha").name("mocha").address(address).build();
-        Member anotherMember = Member.builder().email("mocha@safecorners.io").password("cappuccino").name("cappuccino").address(address).build();
 
         //when
-        assertThatThrownBy(() -> {
-            memberService.join(member);
-            memberService.join(anotherMember);
-        }).isInstanceOf(DuplicateMemberException.class);
+        memberRepository.save(member);
+
+        //then
+        Member findMember = memberRepository.findOneByEmail(member.getEmail());
+
+        assertThat(findMember.getId()).isEqualTo(member.getId());
+        assertThat(findMember.getEmail()).isEqualTo(member.getEmail());
+        assertThat(findMember).isEqualTo(member);
+        assertThat(findMember).isSameAs(member);
     }
 }

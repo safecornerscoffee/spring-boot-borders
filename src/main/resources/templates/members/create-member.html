@@ -23,7 +23,7 @@
         </ul>
       </nav> <!-- breadcrumb -->
 
-      <form action="/members/new" method="post" th:object="${signUpForm}">
+      <form method="post" th:action="@{/members/new}" th:object="${signUpForm}">
         <div class="field">
           <label class="label" th:for="email">이메일</label>
           <div class="control">

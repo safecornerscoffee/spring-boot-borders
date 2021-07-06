@@ -18,6 +18,7 @@ import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilde
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
 import static org.hamcrest.Matchers.notNullValue;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -52,23 +53,6 @@ public class SessionControllerTest {
                 .andExpect(view().name("signin/signin"));
     }
 
-    @Test
-    public void signIn() throws Exception {
-        //given
-        Member member = createMember();
-        given(sessionService.signIn(anyString(), anyString())).willReturn(member);
-
-        MockHttpServletRequestBuilder signInRequest = signInRequest();
-        mockMvc.perform(signInRequest)
-                .andDo(print())
-                .andExpect(status().is3xxRedirection())
-                .andExpect(redirectedUrl("/"))
-                .andExpect(request().sessionAttribute("member", notNullValue()));
-
-        then(sessionService)
-                .should()
-                .signIn(anyString(), anyString());
-    }
 
     @Test
     public void signUpForm() throws Exception {
@@ -96,18 +80,9 @@ public class SessionControllerTest {
                 .signUp(any(Member.class));
     }
 
-    @Test
-    public void logout() throws Exception {
-        Member member = createMember();
-        mockMvc.perform(post("/logout").sessionAttr("member", member))
-                .andDo(print())
-                .andExpect(status().is3xxRedirection())
-                .andExpect(redirectedUrl("/"))
-                .andExpect(request().sessionAttributeDoesNotExist("member"));
-    }
-
     private MockHttpServletRequestBuilder signUpRequest() {
         return post("/signup").contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                .with(csrf())
                 .param("email", "mocha@safecorners.io")
                 .param("password", "mocha")
                 .param("name", "mocha")
@@ -117,7 +92,9 @@ public class SessionControllerTest {
     }
 
     private MockHttpServletRequestBuilder signInRequest() {
-        return post("/signin").contentType(MediaType.APPLICATION_FORM_URLENCODED)
+        return post("/signin")
+                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                .with(csrf())
                 .param("email", "mocha@safecorners.io")
                 .param("password", "mocha");
     }

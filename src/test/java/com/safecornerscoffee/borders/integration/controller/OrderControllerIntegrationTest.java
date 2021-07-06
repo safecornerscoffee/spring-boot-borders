@@ -1,4 +1,4 @@
-package com.safecornerscoffee.borders.controller;
+package com.safecornerscoffee.borders.integration.controller;
 
 import com.safecornerscoffee.borders.domain.Address;
 import com.safecornerscoffee.borders.domain.Member;
@@ -8,21 +8,27 @@ import com.safecornerscoffee.borders.domain.order.Order;
 import com.safecornerscoffee.borders.service.ItemService;
 import com.safecornerscoffee.borders.service.MemberService;
 import com.safecornerscoffee.borders.service.OrderService;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
+import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.context.WebApplicationContext;
 
 import java.util.List;
 import java.util.Map;
+
+import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.*;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
@@ -32,8 +38,7 @@ import static org.hamcrest.Matchers.*;
 import static org.assertj.core.api.Assertions.*;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
-@AutoConfigureMockMvc
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Transactional
 public class OrderControllerIntegrationTest {
 
@@ -45,8 +50,17 @@ public class OrderControllerIntegrationTest {
     OrderService orderService;
 
     @Autowired
+    WebApplicationContext context;
+
     MockMvc mockMvc;
 
+    @Before
+    public void setup() {
+        mockMvc = MockMvcBuilders
+                .webAppContextSetup(context)
+                .apply(springSecurity())
+                .build();
+    }
 
     @Test
     public void createForm() throws Exception {
@@ -66,7 +80,9 @@ public class OrderControllerIntegrationTest {
         Item item = createBook("mocha recipe", 8500, 120);
         int count = 2;
 
-        MockHttpServletRequestBuilder request = post("/orders/new").contentType(MediaType.APPLICATION_FORM_URLENCODED)
+        MockHttpServletRequestBuilder request = post("/orders/new")
+                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                .with(csrf())
                 .param("memberId", member.getId().toString())
                 .param("itemId", item.getId().toString())
                 .param("count", Integer.toString(count));
@@ -90,8 +106,9 @@ public class OrderControllerIntegrationTest {
         orderService.order(member.getId(), book.getId(), 1);
         orderService.order(member.getId(), book.getId(), 1);
 
+        MockHttpServletRequestBuilder request = get("/orders").with(user("user"));
         //when
-        ResultActions resultActions = mockMvc.perform(get("/orders")).andDo(print());
+        ResultActions resultActions = mockMvc.perform(request).andDo(print());
 
         //then
         MvcResult mvcResult = resultActions
@@ -108,7 +125,7 @@ public class OrderControllerIntegrationTest {
         Item book = createBook("how-to-cancel-order", 120, 5);
         Long orderId = orderService.order(member.getId(), book.getId(), 3);
 
-        mockMvc.perform(post("/orders/" + orderId.toString() + "/cancel"))
+        mockMvc.perform(post("/orders/" + orderId.toString() + "/cancel").with(csrf()))
                 .andDo(print())
                 .andExpect(status().is3xxRedirection())
                 .andExpect(redirectedUrl("/orders"));

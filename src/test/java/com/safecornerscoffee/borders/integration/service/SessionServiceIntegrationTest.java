@@ -1,7 +1,9 @@
-package com.safecornerscoffee.borders.service;
+package com.safecornerscoffee.borders.integration.service;
 
 import com.safecornerscoffee.borders.domain.Address;
 import com.safecornerscoffee.borders.domain.Member;
+import com.safecornerscoffee.borders.service.MemberService;
+import com.safecornerscoffee.borders.service.SessionService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
