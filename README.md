@@ -36,7 +36,7 @@ springboot bookstore application
 - [ ] [Spring-Security 19. Testing kr](https://godekdls.github.io/Spring%20Security/testing/)
 - [ ] [Setting Up MockMvc and Spring Security](https://docs.spring.io/spring-security/site/docs/4.0.4.RELEASE/reference/html/test-mockmvc.html)
 - [ ] [Spring Security 기반의 테스트 코드 작성하기](https://seokr.tistory.com/820)
-
+- [ ] [Spring Security for Spring Boot Integration Tests](https://www.baeldung.com/spring-security-integration-tests)
 ### Spring Validator
 
 - [ ] [ConstraintValidator를 이용해서 효과적인 검증](https://cheese10yun.github.io/ConstraintValidator/)

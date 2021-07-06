@@ -1,4 +1,4 @@
-package com.safecornerscoffee.borders.controller;
+package com.safecornerscoffee.borders.integration.controller;
 
 import com.safecornerscoffee.borders.data.SignUpForm;
 import org.junit.Test;
