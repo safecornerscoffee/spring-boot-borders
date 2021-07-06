@@ -19,20 +19,27 @@ springboot bookstore application
 - [x] [Builder 기반으로 객체를 안전하게 생성하는 방법](https://cheese10yun.github.io/spring-builder-pattern/)
 
 ### JPA
+
 - [ ] [JPA 기반 테스트 코드 작성 팁](https://cheese10yun.github.io/jpa-test-support/)
 - [ ] [JPA 선호하는 패턴](https://cheese10yun.github.io/jpa-preference/)
 - [ ] [JPA Best Practices](https://github.com/cheese10yun/spring-jpa-best-practices)
 
 ### Spring Security
 
-- [ ] [Spring Security Session과 CSRF](https://changrea.io/spring/spring-security-session-csrf/)
+- [ ] [Spring Security Session and CSRF](https://changrea.io/spring/spring-security-session-csrf/)
 - [ ] [Sprint Security Session](https://taes-k.github.io/2019/06/12/spring-security-1/)
 - [ ] [Spring Security 파헤치기](https://sjh836.tistory.com/165)
+
+### Spring Security Test
+
+- [ ] [Spring-Security 19. Testing en](https://docs.spring.io/spring-security/site/docs/5.3.2.RELEASE/reference/html5/#test)
+- [ ] [Spring-Security 19. Testing kr](https://godekdls.github.io/Spring%20Security/testing/)
+- [ ] [Setting Up MockMvc and Spring Security](https://docs.spring.io/spring-security/site/docs/4.0.4.RELEASE/reference/html/test-mockmvc.html)
+- [ ] [Spring Security 기반의 테스트 코드 작성하기](https://seokr.tistory.com/820)
 
 ### Spring Validator
 
 - [ ] [ConstraintValidator를 이용해서 효과적인 검증](https://cheese10yun.github.io/ConstraintValidator/)
-
 
 ### CI/CD
 
@@ -72,6 +79,7 @@ springboot bookstore application
 - [x] [Travis-CI Build Stages](https://docs.travis-ci.com/user/build-stages/)
 - [x] [Travis-CI Conditional Builds, Stages and Jobs](https://docs.travis-ci.com/user/conditional-builds-stages-jobs/)
 - [ ] [Travis-CI Using Docker in Builds](https://docs.travis-ci.com/user/docker/#using-docker-compose)
+
 ### Test Coverage
 
 - [ ] [코드 분석 도구 적용기 - 1편, 코드 커버리지(Code Coverage)가 뭔가요?](https://velog.io/@lxxjn0/%EC%BD%94%EB%93%9C-%EB%B6%84%EC%84%9D-%EB%8F%84%EA%B5%AC-%EC%A0%81%EC%9A%A9%EA%B8%B0-1%ED%8E%B8-%EC%BD%94%EB%93%9C-%EC%BB%A4%EB%B2%84%EB%A6%AC%EC%A7%80Code-Coverage%EA%B0%80-%EB%AD%94%EA%B0%80%EC%9A%94)
