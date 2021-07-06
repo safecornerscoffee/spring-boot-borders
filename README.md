@@ -34,6 +34,7 @@ springboot bookstore application
 - [ ] [Spring Security Session and CSRF](https://changrea.io/spring/spring-security-session-csrf/)
 - [ ] [Sprint Security Session](https://taes-k.github.io/2019/06/12/spring-security-1/)
 - [ ] [Spring Security 파헤치기](https://sjh836.tistory.com/165)
+- [ ] [Spring Security 간단 설정과 예제](https://galid1.tistory.com/576)
 
 ### Spring Security Test
 
