@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<h1>Login</h1>
+
+<div th:if="${error}">
+    Unable to login. Check your username and password;
+</div>
+
+<form id="loginForm" method="post" th:action="@{/login}">
+    <label for="username">Username: </label>
+    <input id="username" name="username" type="text">
+    <label for="password">Password: </label>
+    <input id="password" name="password" type="password">
+
+    <input type="submit" value="Login">
+</form>
+</body>
+</html>
