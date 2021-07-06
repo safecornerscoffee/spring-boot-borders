@@ -16,6 +16,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.context.WebApplicationContext;
 
 import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.*;
+
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -68,7 +70,9 @@ public class MemberControllerIntegrationTest {
     }
 
     private MockHttpServletRequestBuilder signUpRequest() {
-        return post("/members/new").contentType(MediaType.APPLICATION_FORM_URLENCODED)
+        return post("/members/new")
+                .with(csrf())
+                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
                 .param("email", "mocha@safecorners.io")
                 .param("password", "mocha")
                 .param("name", "mocha")
