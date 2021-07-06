@@ -9,6 +9,11 @@
         <div class="navbar-end">
             <a class="navbar-item" href="/signin">Sign in</a>
             <a class="navbar-item" href="/signup">Sign up</a>
+            <div class="navbar-item">
+                <form method="post" th:action="@{/logout}">
+                    <input class="button is-outlined" type="submit" value="Logout">
+                </form>
+            </div>
         </div>
     </div>
 </div><!--navbar-->
