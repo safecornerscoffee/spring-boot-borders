@@ -80,7 +80,9 @@ public class OrderControllerIntegrationTest {
         Item item = createBook("mocha recipe", 8500, 120);
         int count = 2;
 
-        MockHttpServletRequestBuilder request = post("/orders/new").contentType(MediaType.APPLICATION_FORM_URLENCODED)
+        MockHttpServletRequestBuilder request = post("/orders/new")
+                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                .with(csrf())
                 .param("memberId", member.getId().toString())
                 .param("itemId", item.getId().toString())
                 .param("count", Integer.toString(count));
@@ -96,7 +98,6 @@ public class OrderControllerIntegrationTest {
     }
 
     @Test
-    @WithMockUser(roles = "ROLE_USER")
     public void orderList() throws Exception {
         //given
         Member member = createMember();
@@ -105,8 +106,9 @@ public class OrderControllerIntegrationTest {
         orderService.order(member.getId(), book.getId(), 1);
         orderService.order(member.getId(), book.getId(), 1);
 
+        MockHttpServletRequestBuilder request = get("/orders").with(user("user"));
         //when
-        ResultActions resultActions = mockMvc.perform(get("/orders")).andDo(print());
+        ResultActions resultActions = mockMvc.perform(request).andDo(print());
 
         //then
         MvcResult mvcResult = resultActions
@@ -123,7 +125,7 @@ public class OrderControllerIntegrationTest {
         Item book = createBook("how-to-cancel-order", 120, 5);
         Long orderId = orderService.order(member.getId(), book.getId(), 3);
 
-        mockMvc.perform(post("/orders/" + orderId.toString() + "/cancel"))
+        mockMvc.perform(post("/orders/" + orderId.toString() + "/cancel").with(csrf()))
                 .andDo(print())
                 .andExpect(status().is3xxRedirection())
                 .andExpect(redirectedUrl("/orders"));
