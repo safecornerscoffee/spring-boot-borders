@@ -6,6 +6,8 @@ springboot bookstore application
 ## References
 - [생산성 향상 비기는 없다](https://cheese10yun.github.io/productivity/)
 - [Class BDDMockito](https://javadoc.io/static/org.mockito/mockito-core/3.11.2/org/mockito/BDDMockito.html)
+- [Spring-Security 19.Testing](https://docs.spring.io/spring-security/site/docs/5.3.2.RELEASE/reference/html5/#test)
+- [Setting Up MockMvc and Spring Security](https://docs.spring.io/spring-security/site/docs/4.0.4.RELEASE/reference/html/test-mockmvc.html)
 
 ### Thymeleaf
 - [x] [Thymeleaf Standard Expression Syntax](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#standard-expression-syntax)
@@ -35,11 +37,10 @@ springboot bookstore application
 
 ### Spring Security Test
 
-- [ ] [Setting Up MockMvc and Spring Security](https://docs.spring.io/spring-security/site/docs/4.0.4.RELEASE/reference/html/test-mockmvc.html)
+- [x] [Setting Up MockMvc and Spring Security](https://docs.spring.io/spring-security/site/docs/4.0.4.RELEASE/reference/html/test-mockmvc.html)
 - [x] [Spring Security for Spring Boot Integration Tests](https://www.baeldung.com/spring-security-integration-tests)
-- [ ] [Spring-Security 19. Testing en](https://docs.spring.io/spring-security/site/docs/5.3.2.RELEASE/reference/html5/#test)
 - [ ] [Spring-Security 19. Testing kr](https://godekdls.github.io/Spring%20Security/testing/)
-- [ ] [Spring Security 기반의 테스트 코드 작성하기](https://seokr.tistory.com/820)
+- [x] [Spring Security 기반의 테스트 코드 작성하기](https://seokr.tistory.com/820)
 
 ### Spring Validator
 

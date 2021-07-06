@@ -20,6 +20,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 import javax.servlet.http.HttpSession;
 
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
 import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.springSecurity;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
@@ -65,20 +66,10 @@ public class SessionControllerIntegrationTest {
         memberService.join(member);
 
         MockHttpServletRequestBuilder signInRequest = signInRequest();
-        HttpSession httpSession = mockMvc.perform(signInRequest)
+        mockMvc.perform(signInRequest)
                 .andDo(print())
                 .andExpect(status().is3xxRedirection())
-                .andExpect(redirectedUrl("/"))
-                .andExpect(request().sessionAttribute("member", notNullValue()))
-                .andReturn()
-                .getRequest()
-                .getSession();
-
-        Member sessionUser = (Member) httpSession.getAttribute("member");
-
-        assertThat(sessionUser.getEmail()).isEqualTo(member.getEmail());
-        assertThat(sessionUser.getName()).isEqualTo(member.getName());
-
+                .andExpect(redirectedUrl("/"));
     }
 
     @Test
@@ -108,7 +99,9 @@ public class SessionControllerIntegrationTest {
     }
 
     private MockHttpServletRequestBuilder signUpRequest() {
-        return post("/signup").contentType(MediaType.APPLICATION_FORM_URLENCODED)
+        return post("/signup")
+                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                .with(csrf())
                 .param("email", "mocha@safecorners.io")
                 .param("password", "mocha")
                 .param("name", "mocha")
@@ -118,8 +111,10 @@ public class SessionControllerIntegrationTest {
     }
 
     private MockHttpServletRequestBuilder signInRequest() {
-        return post("/signin").contentType(MediaType.APPLICATION_FORM_URLENCODED)
-                .param("email", "mocha@safecorners.io")
+        return post("/signin")
+                .contentType(MediaType.APPLICATION_FORM_URLENCODED)
+                .with(csrf())
+                .param("username", "mocha")
                 .param("password", "mocha");
     }
 
