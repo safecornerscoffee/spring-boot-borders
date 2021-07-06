@@ -28,17 +28,18 @@ springboot bookstore application
 
 ### Spring Security
 
+- [ ] [Introduction to Spring Method Security](https://www.baeldung.com/spring-security-method-security)
 - [ ] [Spring Security Session and CSRF](https://changrea.io/spring/spring-security-session-csrf/)
 - [ ] [Sprint Security Session](https://taes-k.github.io/2019/06/12/spring-security-1/)
 - [ ] [Spring Security 파헤치기](https://sjh836.tistory.com/165)
 
 ### Spring Security Test
 
+- [x] [Spring Security for Spring Boot Integration Tests](https://www.baeldung.com/spring-security-integration-tests)
 - [ ] [Spring-Security 19. Testing en](https://docs.spring.io/spring-security/site/docs/5.3.2.RELEASE/reference/html5/#test)
 - [ ] [Spring-Security 19. Testing kr](https://godekdls.github.io/Spring%20Security/testing/)
 - [ ] [Setting Up MockMvc and Spring Security](https://docs.spring.io/spring-security/site/docs/4.0.4.RELEASE/reference/html/test-mockmvc.html)
 - [ ] [Spring Security 기반의 테스트 코드 작성하기](https://seokr.tistory.com/820)
-- [ ] [Spring Security for Spring Boot Integration Tests](https://www.baeldung.com/spring-security-integration-tests)
 
 ### Spring Validator
 
