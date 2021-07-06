@@ -12,6 +12,8 @@ springboot bookstore application
 - [x] [Thymeleaf Expression Basic Objects](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#appendix-a-expression-basic-objects)
 - [x] [Thymeleaf Page layouts](https://www.thymeleaf.org/doc/articles/layouts.html)
 - [x] [Thymeleaf Examples: Layouts](https://github.com/thymeleaf/thymeleafexamples-layouts)
+- [ ] [Introduction to Using Thymeleaf in Spring](https://www.baeldung.com/thymeleaf-in-spring-mvc)
+- [ ] [Thymeleaf + Spring](https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html)
 
 ### Lombok
 - [x] [실무에서 Lombok 사용법](https://cheese10yun.github.io/lombok/)
@@ -37,6 +39,7 @@ springboot bookstore application
 - [ ] [Setting Up MockMvc and Spring Security](https://docs.spring.io/spring-security/site/docs/4.0.4.RELEASE/reference/html/test-mockmvc.html)
 - [ ] [Spring Security 기반의 테스트 코드 작성하기](https://seokr.tistory.com/820)
 - [ ] [Spring Security for Spring Boot Integration Tests](https://www.baeldung.com/spring-security-integration-tests)
+
 ### Spring Validator
 
 - [ ] [ConstraintValidator를 이용해서 효과적인 검증](https://cheese10yun.github.io/ConstraintValidator/)
