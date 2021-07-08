@@ -1,16 +1,6 @@
 spring:
-  datasource:
-    url: jdbc:mariadb://localhost:3306/borders
-    username: borders
-    password: borders
-    driver-class-name: org.mariadb.jdbc.Driver
-
-  jpa:
-    hibernate:
-      ddl-auto: create
-    properties:
-      hibernate:
-        format_sql: true
+  profiles:
+    default: mariadb
 
   thymeleaf:
     prefix: classpath:/templates/

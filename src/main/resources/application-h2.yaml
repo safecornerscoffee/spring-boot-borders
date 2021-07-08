@@ -1,9 +1,13 @@
 spring:
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:test
-    username: test
+    url: jdbc:h2:mem:borders
+    username: borders
     password:
+
+  sql:
+    init:
+      platform: h2
 
   jpa:
     hibernate:
@@ -12,7 +16,6 @@ spring:
       hibernate:
         format_sql: true
 
-logging:
-  level:
-    org.hibernate.SQL: debug
-    org.hibernate.type: trace
+
+
+
