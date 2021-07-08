@@ -2,16 +2,13 @@ package com.safecornerscoffee.borders.service;
 
 import com.safecornerscoffee.borders.domain.Address;
 import com.safecornerscoffee.borders.domain.Member;
-import com.safecornerscoffee.borders.helper.BcryptPasswordEncoder;
-import com.safecornerscoffee.borders.helper.PasswordEncoder;
-import com.safecornerscoffee.borders.helper.StubPasswordEncoder;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import static org.mockito.BDDMockito.*;
 import static org.assertj.core.api.Assertions.*;
@@ -40,14 +37,14 @@ public class SessionServiceTest {
     public void signIn() {
         //given
         given(memberService.findOneByEmail(member.getEmail())).willReturn(member);
-        given(passwordEncoder.compareHashAndPassword(anyString(), anyString())).willReturn(true);
+        given(passwordEncoder.matches(anyString(), anyString())).willReturn(true);
 
         //when
         Member signedMember = sessionService.signIn(member.getEmail(), member.getPassword());
 
         //then
         then(memberService).should().findOneByEmail(anyString());
-        then(passwordEncoder).should().compareHashAndPassword(anyString(), anyString());
+        then(passwordEncoder).should().matches(anyString(), anyString());
         assertThat(signedMember).isNotNull();
         assertThat(signedMember.getEmail()).isEqualTo(member.getEmail());
     }

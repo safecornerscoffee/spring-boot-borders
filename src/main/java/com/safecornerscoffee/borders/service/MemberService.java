@@ -4,9 +4,9 @@ import com.safecornerscoffee.borders.data.UpdateMemberForm;
 import com.safecornerscoffee.borders.domain.Address;
 import com.safecornerscoffee.borders.domain.Member;
 import com.safecornerscoffee.borders.exception.DuplicateMemberException;
-import com.safecornerscoffee.borders.helper.PasswordEncoder;
 import com.safecornerscoffee.borders.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,7 +23,7 @@ public class MemberService {
     @Transactional
     public Long join(Member member) {
         validateDuplicateMember(member);
-        member.setPassword(passwordEncoder.generateFromPassword(member.getPassword()));
+        member.setPassword(passwordEncoder.encode(member.getPassword()));
         memberRepository.save(member);
         return member.getId();
     }
@@ -33,7 +33,7 @@ public class MemberService {
         Member member = memberRepository.findOne(memberId);
         member.setEmail(dto.getEmail());
         if (!dto.getPassword().equals(member.getPassword())) {
-            member.setPassword(passwordEncoder.generateFromPassword(dto.getPassword()));
+            member.setPassword(passwordEncoder.encode(dto.getPassword()));
         }
         member.setName(dto.getName());
         member.setAddress(new Address(dto.getCity(), dto.getStreet(), dto.getZipcode()));
