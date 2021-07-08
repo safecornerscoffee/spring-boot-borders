@@ -1,17 +1,15 @@
 package com.safecornerscoffee.borders.security.password;
 
 import org.springframework.security.crypto.bcrypt.BCrypt;
-import org.springframework.stereotype.Component;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
-@Component
 public class BcryptPasswordEncoder implements PasswordEncoder {
     @Override
-    public String generateFromPassword(String password) {
-        return BCrypt.hashpw(password, BCrypt.gensalt());
+    public String encode(CharSequence rawPassword) {
+        return BCrypt.hashpw(rawPassword.toString(), BCrypt.gensalt());
     }
 
-    @Override
-    public boolean compareHashAndPassword(String password, String hashedPassword) {
-        return BCrypt.checkpw(password, hashedPassword);
+    public boolean matches(CharSequence rawPassword, String encodedPassword) {
+        return BCrypt.checkpw(rawPassword.toString(), encodedPassword);
     }
 }

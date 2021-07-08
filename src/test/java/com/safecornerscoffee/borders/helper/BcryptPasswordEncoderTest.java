@@ -1,8 +1,8 @@
 package com.safecornerscoffee.borders.helper;
 
 import com.safecornerscoffee.borders.security.password.BcryptPasswordEncoder;
-import com.safecornerscoffee.borders.security.password.PasswordEncoder;
 import org.junit.Test;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -14,11 +14,11 @@ public class BcryptPasswordEncoderTest {
     public void compareWithInvalidPassword() {
         //given
         String password = "mocha";
-        String hashedPassword = passwordEncoder.generateFromPassword(password);
+        String hashedPassword = passwordEncoder.encode(password);
         String invalidPassword = "cappuccino";
 
         //when
-        boolean isMatch = passwordEncoder.compareHashAndPassword(invalidPassword, hashedPassword);
+        boolean isMatch = passwordEncoder.matches(invalidPassword, hashedPassword);
 
         assertThat(isMatch).isFalse();
     }
@@ -27,10 +27,10 @@ public class BcryptPasswordEncoderTest {
     public void compareHashAndPassword() {
         //given
         String password = "mocha";
-        String hashedPassword = passwordEncoder.generateFromPassword(password);
+        String hashedPassword = passwordEncoder.encode(password);
 
         //when
-        boolean isMatch = passwordEncoder.compareHashAndPassword(password, hashedPassword);
+        boolean isMatch = passwordEncoder.matches(password, hashedPassword);
 
         assertThat(isMatch).isTrue();
     }

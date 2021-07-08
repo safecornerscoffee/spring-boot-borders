@@ -1,15 +1,17 @@
 package com.safecornerscoffee.borders.security.password;
 
+import org.springframework.security.crypto.password.PasswordEncoder;
+
 public class NoOpPasswordEncoder implements PasswordEncoder {
 
     @Override
-    public String generateFromPassword(String password) {
-        return password;
+    public String encode(CharSequence rawPassword) {
+        return rawPassword.toString();
     }
 
     @Override
-    public boolean compareHashAndPassword(String password, String hashedPassword) {
-        return password.equals(hashedPassword);
+    public boolean matches(CharSequence rawPassword, String encodedPassword) {
+        return rawPassword.toString().equals(encodedPassword);
     }
 
 }
