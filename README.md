@@ -55,10 +55,9 @@ springboot bookstore application
 
 ### Spring Profiles
 
-- [ ] [Spring Profiles](https://www.baeldung.com/spring-profiles)
-- [ ] [Spring @Profile 애노테이션](https://johngrib.github.io/wiki/spring-annotation-profile/)
-- [ ] [스프링 부트 개념과 활용 - Profile](https://dailyheumsi.tistory.com/172)
-- [ ] [@Profile 과 @ActiveProfiles](http://wonwoo.ml/index.php/post/1933)
+- [x] [Spring Profiles](https://www.baeldung.com/spring-profiles)
+- [x] [스프링 부트 개념과 활용 - Profile](https://dailyheumsi.tistory.com/172)
+- [x] [Spring @Profile 애노테이션](https://johngrib.github.io/wiki/spring-annotation-profile/)
 
 ### Test
 
