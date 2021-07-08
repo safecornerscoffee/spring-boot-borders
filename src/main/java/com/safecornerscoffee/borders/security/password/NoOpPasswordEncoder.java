@@ -1,6 +1,6 @@
 package com.safecornerscoffee.borders.security.password;
 
-public class StubPasswordEncoder implements PasswordEncoder {
+public class NoOpPasswordEncoder implements PasswordEncoder {
 
     @Override
     public String generateFromPassword(String password) {
