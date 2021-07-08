@@ -4,7 +4,7 @@ import com.safecornerscoffee.borders.data.UpdateMemberForm;
 import com.safecornerscoffee.borders.domain.Address;
 import com.safecornerscoffee.borders.domain.Member;
 import com.safecornerscoffee.borders.exception.DuplicateMemberException;
-import com.safecornerscoffee.borders.helper.PasswordEncoder;
+import com.safecornerscoffee.borders.security.password.PasswordEncoder;
 import com.safecornerscoffee.borders.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

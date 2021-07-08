@@ -1,7 +1,7 @@
 package com.safecornerscoffee.borders.service;
 
 import com.safecornerscoffee.borders.domain.Member;
-import com.safecornerscoffee.borders.helper.PasswordEncoder;
+import com.safecornerscoffee.borders.security.password.PasswordEncoder;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

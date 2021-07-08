@@ -1,6 +1,4 @@
-package com.safecornerscoffee.borders.helper;
-
-import org.springframework.stereotype.Component;
+package com.safecornerscoffee.borders.security.password;
 
 public class StubPasswordEncoder implements PasswordEncoder {
 

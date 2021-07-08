@@ -1,4 +1,4 @@
-package com.safecornerscoffee.borders.helper;
+package com.safecornerscoffee.borders.security.password;
 
 public interface PasswordEncoder {
 

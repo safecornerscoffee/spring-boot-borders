@@ -2,15 +2,12 @@ package com.safecornerscoffee.borders.service;
 
 import com.safecornerscoffee.borders.domain.Address;
 import com.safecornerscoffee.borders.domain.Member;
-import com.safecornerscoffee.borders.helper.BcryptPasswordEncoder;
-import com.safecornerscoffee.borders.helper.PasswordEncoder;
-import com.safecornerscoffee.borders.helper.StubPasswordEncoder;
+import com.safecornerscoffee.borders.security.password.PasswordEncoder;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Spy;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.mockito.BDDMockito.*;

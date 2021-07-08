@@ -1,4 +1,4 @@
-package com.safecornerscoffee.borders.helper;
+package com.safecornerscoffee.borders.security.password;
 
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Component;
