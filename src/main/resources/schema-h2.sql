@@ -35,7 +35,7 @@ create table if not exists authorities
 ) references users
 (
     username
-)
+);
     );
 
 create
