@@ -29,7 +29,7 @@ springboot bookstore application
 - [ ] [JPA Best Practices](https://github.com/cheese10yun/spring-jpa-best-practices)
 
 ### Spring Security
-
+- [ ] [Spring Security Architecture](https://spring.io/guides/topicals/spring-security-architecture#_customizing_authentication_managers)
 - [ ] [Introduction to Spring Method Security](https://www.baeldung.com/spring-security-method-security)
 - [ ] [Spring Security Session and CSRF](https://changrea.io/spring/spring-security-session-csrf/)
 - [ ] [Sprint Security Session](https://taes-k.github.io/2019/06/12/spring-security-1/)
