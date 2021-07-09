@@ -97,9 +97,9 @@ public class SessionControllerIntegrationTest {
                 .andExpect(redirectedUrl("/"))
                 .andExpect(request().sessionAttribute("member", notNullValue()));
 
-        Member member = memberService.findOneByEmail("mocha@safecorners.io");
+        Member member = memberService.findOneByEmail("mocha@safecornerscofee.com");
 
-        assertThat(member.getEmail()).isEqualTo("mocha@safecorners.io");
+        assertThat(member.getEmail()).isEqualTo("mocha@safecornerscofee.com");
         assertThat(member.getName()).isEqualTo("mocha");
         assertThat(member.getAddress()).isEqualTo(new Address("city", "street", "zipcode"));
 
