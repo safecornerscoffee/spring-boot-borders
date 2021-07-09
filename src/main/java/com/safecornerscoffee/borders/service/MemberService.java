@@ -2,6 +2,7 @@ package com.safecornerscoffee.borders.service;
 
 import com.safecornerscoffee.borders.data.UpdateMemberForm;
 import com.safecornerscoffee.borders.domain.Address;
+import com.safecornerscoffee.borders.domain.Authority;
 import com.safecornerscoffee.borders.domain.Member;
 import com.safecornerscoffee.borders.exception.DuplicateMemberException;
 import com.safecornerscoffee.borders.repository.MemberRepository;
@@ -25,6 +26,8 @@ public class MemberService {
         validateDuplicateMember(member);
         member.setPassword(passwordEncoder.encode(member.getPassword()));
         memberRepository.save(member);
+        Authority authority = new Authority(member,"ROLE_USER");
+        member.addAuthority(authority);
         return member.getId();
     }
 
