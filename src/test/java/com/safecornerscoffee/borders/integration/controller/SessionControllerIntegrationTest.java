@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -19,6 +20,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.context.WebApplicationContext;
 
+import javax.persistence.EntityManager;
 import javax.servlet.http.HttpSession;
 
 import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
@@ -30,7 +32,6 @@ import static org.hamcrest.Matchers.*;
 
 import static org.assertj.core.api.Assertions.*;
 
-@ActiveProfiles("h2")
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Transactional
@@ -43,6 +44,9 @@ public class SessionControllerIntegrationTest {
 
     @Autowired
     MemberService memberService;
+
+    @Autowired
+    EntityManager em;
 
     @Before
     public void setup() {
@@ -66,6 +70,7 @@ public class SessionControllerIntegrationTest {
         //given
         Member member = createMember();
         memberService.join(member);
+        em.flush();
 
         MockHttpServletRequestBuilder signInRequest = signInRequest();
         mockMvc.perform(signInRequest)
@@ -104,7 +109,7 @@ public class SessionControllerIntegrationTest {
         return post("/signup")
                 .contentType(MediaType.APPLICATION_FORM_URLENCODED)
                 .with(csrf())
-                .param("email", "mocha@safecorners.io")
+                .param("email", "mocha@safecornerscofee.com")
                 .param("password", "mocha")
                 .param("name", "mocha")
                 .param("city", "city")
@@ -116,13 +121,13 @@ public class SessionControllerIntegrationTest {
         return post("/signin")
                 .contentType(MediaType.APPLICATION_FORM_URLENCODED)
                 .with(csrf())
-                .param("username", "mocha")
+                .param("email", "mocha@safecornerscoffee.com")
                 .param("password", "mocha");
     }
 
     private Member createMember() {
         return Member.builder()
-                .email("mocha@safecorners.io")
+                .email("mocha@safecornerscoffee.com")
                 .password("mocha")
                 .name("mocha")
                 .address(new Address("city", "street", "zipcode"))

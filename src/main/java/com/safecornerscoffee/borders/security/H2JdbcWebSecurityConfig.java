@@ -34,7 +34,7 @@ public class H2JdbcWebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin()
                 .loginPage("/signin")
-                .usernameParameter("username")
+                .usernameParameter("email")
                 .passwordParameter("password")
                 .and()
                 .logout()
@@ -47,13 +47,13 @@ public class H2JdbcWebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.jdbcAuthentication()
                 .dataSource(dataSource)
-                .usersByUsernameQuery("select username, password, enabled from users " + "where username=?")
-                .authoritiesByUsernameQuery("select username, authority from authorities " + "where username=?")
-                .passwordEncoder(encoder());
+                .usersByUsernameQuery("select email, password, enabled from members " + "where email=?")
+                .authoritiesByUsernameQuery("select email, authority from authorities " + "where email=?")
+                .passwordEncoder(passwordEncoder());
     }
 
     @Bean
-    public PasswordEncoder encoder() {
+    public PasswordEncoder passwordEncoder() {
         return new NoOpPasswordEncoder();
     }
 }
