@@ -2,12 +2,15 @@ package com.safecornerscoffee.borders.domain;
 
 import com.safecornerscoffee.borders.domain.order.Order;
 import lombok.*;
+import org.hibernate.annotations.NaturalId;
 import org.springframework.util.Assert;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "members")
@@ -21,11 +24,16 @@ public class Member {
     @Column(name = "member_id")
     private Long id;
 
-    @NotEmpty
+    @NaturalId
     private String email;
 
     @NotEmpty
     private String password;
+
+    private Boolean enabled;
+
+    @OneToMany(mappedBy = "member", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Authority> authorities = new ArrayList<>();
 
     @NotEmpty
     private String name;
@@ -47,5 +55,10 @@ public class Member {
         this.password = password;
         this.name = name;
         this.address = address;
+        this.enabled = true;
+    }
+
+    public void addAuthority(Authority authority) {
+        authorities.add(authority);
     }
 }
