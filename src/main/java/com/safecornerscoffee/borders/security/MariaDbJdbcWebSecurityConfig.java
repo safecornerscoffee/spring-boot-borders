@@ -1,6 +1,5 @@
 package com.safecornerscoffee.borders.security;
 
-import com.safecornerscoffee.borders.security.password.NoOpPasswordEncoder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -10,18 +9,17 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 
-@Profile("h2")
+@Profile("mariadb")
 @Configuration
 @EnableWebSecurity
-public class H2JdbcWebSecurityConfig extends WebSecurityConfigurerAdapter {
+public class MariaDbJdbcWebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final DataSource dataSource;
 
-    public H2JdbcWebSecurityConfig(DataSource dataSource) {
+    public MariaDbJdbcWebSecurityConfig(DataSource dataSource) {
         this.dataSource = dataSource;
     }
 
@@ -29,31 +27,32 @@ public class H2JdbcWebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/orders")
-                .access("hasRole('ROLE_USER')")
-                .antMatchers("/", "/**").access("permitAll")
+                    .access("hasRole('ROLE_USER')")
+                .antMatchers("/", "/**")
+                    .access("permitAll")
                 .and()
                 .formLogin()
-                .loginPage("/signin")
-                .usernameParameter("username")
-                .passwordParameter("password")
+                    .loginPage("/signin")
+                    .usernameParameter("email")
+                    .passwordParameter("password")
                 .and()
-                .logout()
-                .logoutSuccessUrl("/")
+                    .logout()
+                    .logoutSuccessUrl("/")
                 .and()
-                .csrf();
+                    .csrf();
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.jdbcAuthentication()
-                .dataSource(dataSource)
-                .usersByUsernameQuery("select username, password, enabled from users " + "where username=?")
-                .authoritiesByUsernameQuery("select username, authority from authorities " + "where username=?")
-                .passwordEncoder(encoder());
+            .dataSource(dataSource)
+            .usersByUsernameQuery("select email, password, enabled from members " + "where email=?")
+            .authoritiesByUsernameQuery("select email, authority from authorities " + "where email=?")
+            .passwordEncoder(passwordEncoder());
     }
 
     @Bean
-    public PasswordEncoder encoder() {
-        return new NoOpPasswordEncoder();
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 }
