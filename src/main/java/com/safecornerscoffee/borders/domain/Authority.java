@@ -18,7 +18,7 @@ public class Authority {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "member_id")
+    @JoinColumn(name = "email", referencedColumnName = "email")
     private Member member;
 
     private String authority;

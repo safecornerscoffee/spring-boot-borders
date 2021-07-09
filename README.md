@@ -27,11 +27,11 @@ springboot bookstore application
 - [ ] [JPA 기반 테스트 코드 작성 팁](https://cheese10yun.github.io/jpa-test-support/)
 - [ ] [JPA 선호하는 패턴](https://cheese10yun.github.io/jpa-preference/)
 - [ ] [JPA Best Practices](https://github.com/cheese10yun/spring-jpa-best-practices)
-- [ ] [How to map a @ManyToOne association using a non-Primary Key column with JPA and Hibernate](https://vladmihalcea.com/how-to-map-a-manytoone-association-using-a-non-primary-key-column/)
-- [ ] [The best way to map a @NaturalId business key with JPA and Hibernate](https://vladmihalcea.com/the-best-way-to-map-a-naturalid-business-key-with-jpa-and-hibernate/)
-- [ ] [How to implement Equals and HashCode for JPA entities](https://vladmihalcea.com/hibernate-facts-equals-and-hashcode/)
-- [ ] [How to implement equals and hashCode using the JPA entity identifier (Primary Key)](https://vladmihalcea.com/how-to-implement-equals-and-hashcode-using-the-jpa-entity-identifier/)
-
+- [ ] [하이버네이트(JPA) 베스트 프랙티스](https://chanwookpark.github.io/jpa/hibernate/%EB%B2%88%EC%97%AD/2016/09/26/hibernate-jpa-best-practices/)
+- [x] [Hibernate Tips: How to model an association that doesn’t reference primary key columns](https://thorben-janssen.com/hibernate-tips-model-association-dont-reference-primary-key-columns/)
+- [ ] [@NaturalId – A good way to persist natural IDs with Hibernate?](https://thorben-janssen.com/naturalid-good-way-persist-natural-ids-hibernate/)
+- [ ] [Map Associations with JPA and Hibernate – The Ultimate Guide](https://thorben-janssen.com/ultimate-guide-association-mappings-jpa-hibernate/)
+- [ ] [Best Practices for Many-To-One and One-To-Many Association Mappings](https://thorben-janssen.com/best-practices-many-one-one-many-associations-mappings/)
 
 ### Spring Security
 - [ ] [Spring Security Architecture](https://spring.io/guides/topicals/spring-security-architecture#_customizing_authentication_managers)
