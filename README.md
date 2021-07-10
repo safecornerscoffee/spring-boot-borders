@@ -14,7 +14,7 @@ springboot bookstore application
 - [x] [Thymeleaf Expression Basic Objects](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#appendix-a-expression-basic-objects)
 - [x] [Thymeleaf Page layouts](https://www.thymeleaf.org/doc/articles/layouts.html)
 - [x] [Thymeleaf Examples: Layouts](https://github.com/thymeleaf/thymeleafexamples-layouts)
-- [ ] [Introduction to Using Thymeleaf in Spring](https://www.baeldung.com/thymeleaf-in-spring-mvc)
+- [x] [Introduction to Using Thymeleaf in Spring](https://www.baeldung.com/thymeleaf-in-spring-mvc)
 - [ ] [Thymeleaf + Spring](https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html)
 - [x] [Themeleaf + Spring Security dialect](https://minholee93.tistory.com/entry/Spring-Security-Thymeleaf-Integration-Spring-Boot-9)
 - [x] [Spring Security with Thymeleaf](https://www.baeldung.com/spring-security-thymeleaf)
@@ -36,6 +36,8 @@ springboot bookstore application
 - [ ] [Best Practices for Many-To-One and One-To-Many Association Mappings](https://thorben-janssen.com/best-practices-many-one-one-many-associations-mappings/)
 
 ### Spring Security
+- [ ] [Spring Boot Security Playlist](https://www.youtube.com/playlist?list=PLVApX3evDwJ1d0lKKHssPQvzv2Ao3e__Q)
+- [ ] [Granted Authority Versus Role in Spring Security](https://www.baeldung.com/spring-security-granted-authority-vs-role)
 - [x] [Spring Security Architecture](https://spring.io/guides/topicals/spring-security-architecture#_customizing_authentication_managers)
 - [ ] [Introduction to Spring Method Security](https://www.baeldung.com/spring-security-method-security)
 - [ ] [Spring Security Session and CSRF](https://changrea.io/spring/spring-security-session-csrf/)
@@ -43,6 +45,7 @@ springboot bookstore application
 - [ ] [Spring Security 파헤치기](https://sjh836.tistory.com/165)
 - [x] [Spring Security 간단 설정과 예제](https://galid1.tistory.com/576)
 - [x] [Spring Security Authentication Interface](https://docs.spring.io/spring-security/site/docs/5.0.3.RELEASE/api/org/springframework/security/core/Authentication.html)
+- [x] [Spring Security: Authentication with a Database-backed UserDetailsService](https://www.baeldung.com/spring-security-authentication-with-a-database)
 
 ### Spring Security Test
 
@@ -55,12 +58,8 @@ springboot bookstore application
 
 - [x] [Spring Security: Exploring JDBC Authentication](https://www.baeldung.com/spring-security-jdbc-authentication)
 - [x] [Sprint Security Architecture: Customizing Authentication Managers](https://spring.io/guides/topicals/spring-security-architecture#_customizing_authentication_managers)
-- [ ] [Spring Security: JDBC를 이용한 로그인 인증방법](https://djunnni.gitbook.io/springboot/2019-10-05)
-- [ ] [Spring Security; JDBC 로그인](https://gaemi606.tistory.com/entry/Spring-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0Spring-Security-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-3-%EB%93%9C%EB%94%94%EC%96%B4-DB%EC%97%B0%EB%8F%99-%EB%A1%9C%EA%B7%B8%EC%9D%B8)
-- [ ] [Spring Security: MyBatis 연결 및 DB를 이용한 간단한 로그인 인증](https://to-dy.tistory.com/85)
-
-### Spring Security UserDetailsService Authentication
-- [x] [Spring Security: Authentication with a Database-backed UserDetailsService](https://www.baeldung.com/spring-security-authentication-with-a-database )
+- [x] [Spring Security; JDBC 로그인](https://gaemi606.tistory.com/entry/Spring-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0Spring-Security-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-3-%EB%93%9C%EB%94%94%EC%96%B4-DB%EC%97%B0%EB%8F%99-%EB%A1%9C%EA%B7%B8%EC%9D%B8)
+- [x] [Spring Security: MyBatis 연결 및 DB를 이용한 간단한 로그인 인증](https://to-dy.tistory.com/85)
 
 ### Spring Validator
 
