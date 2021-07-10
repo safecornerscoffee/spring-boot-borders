@@ -43,7 +43,7 @@ public class MemberService {
     }
 
     private void validateDuplicateMember(Member member) {
-        List<Member> findMembers = memberRepository.findByEmail(member.getEmail());
+        List<Member> findMembers = memberRepository.findAllByEmail(member.getEmail());
         if (!findMembers.isEmpty()) {
             throw new DuplicateMemberException("이미 존재하는 회원입니다.");
         }
@@ -58,6 +58,6 @@ public class MemberService {
     }
 
     public Member findOneByEmail(String email) {
-        return memberRepository.findOneByEmail(email);
+        return memberRepository.findByEmail(email);
     }
 }
