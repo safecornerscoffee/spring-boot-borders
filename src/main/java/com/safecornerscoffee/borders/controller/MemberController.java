@@ -1,8 +1,7 @@
 package com.safecornerscoffee.borders.controller;
 
-import com.safecornerscoffee.borders.data.UpdateMemberForm;
 import com.safecornerscoffee.borders.data.SignUpForm;
-import com.safecornerscoffee.borders.domain.Address;
+import com.safecornerscoffee.borders.data.UpdateMemberForm;
 import com.safecornerscoffee.borders.domain.Member;
 import com.safecornerscoffee.borders.service.MemberService;
 import lombok.RequiredArgsConstructor;
@@ -35,16 +34,7 @@ public class MemberController {
             return "members/create-member";
         }
 
-        // todo MemberAssembler
-        Address address = new Address(dto.getCity(), dto.getStreet(), dto.getZipcode());
-        Member member = Member.builder()
-                .email(dto.getEmail())
-                .password(dto.getPassword())
-                .name(dto.getName())
-                .address(address)
-                .build();
-
-        memberService.join(member);
+        memberService.join(dto.toMember());
 
         return "redirect:/members";
     }

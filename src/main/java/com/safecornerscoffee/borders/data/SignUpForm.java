@@ -1,5 +1,7 @@
 package com.safecornerscoffee.borders.data;
 
+import com.safecornerscoffee.borders.domain.Address;
+import com.safecornerscoffee.borders.domain.Member;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,4 +18,14 @@ public class SignUpForm {
     private String city;
     private String street;
     private String zipcode;
+
+
+    public Member toMember() {
+        return Member.builder()
+                .email(email)
+                .password(password)
+                .name(name)
+                .address(new Address(city, street, zipcode))
+                .build();
+    }
 }

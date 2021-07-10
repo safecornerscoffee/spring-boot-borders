@@ -2,9 +2,6 @@ package com.safecornerscoffee.borders.controller;
 
 import com.safecornerscoffee.borders.data.SignInForm;
 import com.safecornerscoffee.borders.data.SignUpForm;
-import com.safecornerscoffee.borders.domain.Address;
-import com.safecornerscoffee.borders.domain.Member;
-import com.safecornerscoffee.borders.service.MemberService;
 import com.safecornerscoffee.borders.service.SessionService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -13,7 +10,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 @Controller
@@ -35,24 +31,15 @@ public class SessionController {
     }
 
     @PostMapping("/signup")
-    public String signUp(@Valid SignUpForm dto, HttpSession httpSession, BindingResult result) {
+    public String signUp(@Valid SignUpForm dto, BindingResult result) {
 
         if (result.hasErrors()) {
             return "signup/signup";
         }
 
-        Member member = Member.builder()
-                .email(dto.getEmail())
-                .password(dto.getPassword())
-                .name(dto.getName())
-                .address(new Address(dto.getCity(), dto.getStreet(), dto.getZipcode()))
-                .build();
+        sessionService.signUp(dto.toMember());
 
-        Member signedMember = sessionService.signUp(member);
-
-        httpSession.setAttribute("member", signedMember);
-
-        return "redirect:/";
+        return "redirect:/signin";
     }
 
 }
