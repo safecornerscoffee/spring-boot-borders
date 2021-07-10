@@ -1,8 +1,8 @@
 package com.safecornerscoffee.borders.repository;
 
 import com.safecornerscoffee.borders.domain.Member;
-import org.springframework.stereotype.Repository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -27,13 +27,13 @@ public class MemberRepository {
         return em.createQuery("select m from Member m", Member.class).getResultList();
     }
 
-    public Member findOneByEmail(String email) {
+    public Member findByEmail(String email) {
         return em.createQuery("select m from Member m where m.email = :email", Member.class)
                 .setParameter("email", email)
                 .getSingleResult();
     }
 
-    public List<Member> findByEmail(String email) {
+    public List<Member> findAllByEmail(String email) {
         return em.createQuery("select m from Member m where m.email = :email", Member.class)
                 .setParameter("email", email)
                 .getResultList();

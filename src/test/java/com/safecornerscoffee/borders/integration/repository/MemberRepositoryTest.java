@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -47,7 +47,7 @@ public class MemberRepositoryTest {
         memberRepository.save(member);
 
         //then
-        Member findMember = memberRepository.findOneByEmail(member.getEmail());
+        Member findMember = memberRepository.findByEmail(member.getEmail());
 
         assertThat(findMember.getId()).isEqualTo(member.getId());
         assertThat(findMember.getEmail()).isEqualTo(member.getEmail());
