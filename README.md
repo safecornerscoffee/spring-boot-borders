@@ -62,7 +62,7 @@ springboot bookstore application
 - [x] [Spring Security: MyBatis 연결 및 DB를 이용한 간단한 로그인 인증](https://to-dy.tistory.com/85)
 
 ### Spring Validator
-
+- [ ] [Validation 어디까지 해봤니?](https://meetup.toast.com/posts/223)
 - [ ] [ConstraintValidator를 이용해서 효과적인 검증](https://cheese10yun.github.io/ConstraintValidator/)
 
 ### CI/CD
