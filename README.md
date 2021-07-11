@@ -42,12 +42,21 @@ springboot bookstore application
 - [ ] [Granted Authority Versus Role in Spring Security](https://www.baeldung.com/spring-security-granted-authority-vs-role)
 - [x] [Spring Security Architecture](https://spring.io/guides/topicals/spring-security-architecture#_customizing_authentication_managers)
 - [ ] [Introduction to Spring Method Security](https://www.baeldung.com/spring-security-method-security)
-- [ ] [Spring Security Session and CSRF](https://changrea.io/spring/spring-security-session-csrf/)
-- [ ] [Sprint Security Session](https://taes-k.github.io/2019/06/12/spring-security-1/)
-- [ ] [Spring Security 파헤치기](https://sjh836.tistory.com/165)
-- [x] [Spring Security 간단 설정과 예제](https://galid1.tistory.com/576)
 - [x] [Spring Security Authentication Interface](https://docs.spring.io/spring-security/site/docs/5.0.3.RELEASE/api/org/springframework/security/core/Authentication.html)
 - [x] [Spring Security: Authentication with a Database-backed UserDetailsService](https://www.baeldung.com/spring-security-authentication-with-a-database)
+
+- [ ] [Spring Security 파헤치기](https://sjh836.tistory.com/165)
+- [ ] [Spring Security Start](https://changrea.io/spring/spring-security-start/)
+- [ ] [Spring Security Authentication: Form, success, failure](https://changrea.io/spring/spring-security-authentication/)
+- [ ] [Spring Security Authentication: DB, Password, Logout](https://changrea.io/spring/spring-security-authentication-db/)
+- [ ] [Spring Security Authorization](https://changrea.io/spring/spring-security-authorization/)
+- [ ] [Spring Security Session and CSRF](https://changrea.io/spring/spring-security-session-csrf/)
+
+- [ ] [Spring Security XML: 1.의존성 추가](https://gaemi606.tistory.com/entry/Spring-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0Spring-Security-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-1)
+- [ ] [Spring Security XML: 2.로그인 페이지](https://gaemi606.tistory.com/entry/Spring-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0Spring-Security-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-2)
+- [ ] [Spring Security XML: 3.JDBC 로그인](https://gaemi606.tistory.com/entry/Spring-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0Spring-Security-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-3-%EB%93%9C%EB%94%94%EC%96%B4-DB%EC%97%B0%EB%8F%99-%EB%A1%9C%EA%B7%B8%EC%9D%B8)
+- [ ] [Spring Security XML: 4.MyBatis 로그인](https://gaemi606.tistory.com/entry/Spring-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0Spring-Security-4-MyBatis%EC%9D%B4%EC%9A%A9-%EB%A1%9C%EA%B7%B8%EC%9D%B8)
+
 
 ### Spring Security Test
 
