@@ -5,9 +5,10 @@ springboot bookstore application
 
 ## References
 - [생산성 향상 비기는 없다](https://cheese10yun.github.io/productivity/)
-- [Class BDDMockito](https://javadoc.io/static/org.mockito/mockito-core/3.11.2/org/mockito/BDDMockito.html)
-- [Spring-Security 19.Testing](https://docs.spring.io/spring-security/site/docs/5.3.2.RELEASE/reference/html5/#test)
-- [Setting Up MockMvc and Spring Security](https://docs.spring.io/spring-security/site/docs/4.0.4.RELEASE/reference/html/test-mockmvc.html)
+- [소프트웨어 개발과 설계](https://suhwan.dev/2020/04/11/backend-application-design-202004/)
+- [클린 아키텍처 후기](https://suhwan.dev/2019/10/06/review-clean-architecture/)
+- [Implementing Domain-Driven Design](https://suhwan.dev/2021/04/08/implementing-domain-driven-design/)
+- [Refactoring - Martin Fowler](https://suhwan.dev/2021/02/09/refactoring-martin-fowler/)
 
 ### Thymeleaf
 - [x] [Thymeleaf Standard Expression Syntax](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#standard-expression-syntax)
@@ -50,10 +51,12 @@ springboot bookstore application
 
 ### Spring Security Test
 
+- [Spring-Security 19.Testing](https://docs.spring.io/spring-security/site/docs/5.3.2.RELEASE/reference/html5/#test)
 - [x] [Setting Up MockMvc and Spring Security](https://docs.spring.io/spring-security/site/docs/4.0.4.RELEASE/reference/html/test-mockmvc.html)
 - [x] [Spring Security for Spring Boot Integration Tests](https://www.baeldung.com/spring-security-integration-tests)
 - [x] [Spring-Security 19. Testing kr](https://godekdls.github.io/Spring%20Security/testing/)
 - [x] [Spring Security 기반의 테스트 코드 작성하기](https://seokr.tistory.com/820)
+- [x] [Setting Up MockMvc and Spring Security](https://docs.spring.io/spring-security/site/docs/4.0.4.RELEASE/reference/html/test-mockmvc.html)
 
 ### Spring Security JDBC Authentication
 
@@ -63,14 +66,14 @@ springboot bookstore application
 - [x] [Spring Security: MyBatis 연결 및 DB를 이용한 간단한 로그인 인증](https://to-dy.tistory.com/85)
 
 ### Spring Validator
-- [ ] [Validation 어디까지 해봤니?](https://meetup.toast.com/posts/223)
-- [ ] [ConstraintValidator를 이용해서 효과적인 검증](https://cheese10yun.github.io/ConstraintValidator/)
+- [x] [Validation 어디까지 해봤니?](https://meetup.toast.com/posts/223)
+- [ ] [ConstraintValidator를 이용한 검증](https://cheese10yun.github.io/ConstraintValidator/)
 
 ### CI/CD
 
 - [x] [인텔리제이 Github Code Review](https://cheese10yun.github.io/intellij-code-review/)
-- [ ] [Github Action With Gradle](https://cheese10yun.github.io/github-action-1/)
 - [x] [백엔드가 이정도는 해줘야 함](https://velog.io/@city7310/series/%EB%B0%B1%EC%97%94%EB%93%9C%EA%B0%80-%EC%9D%B4%EC%A0%95%EB%8F%84%EB%8A%94-%ED%95%B4%EC%A4%98%EC%95%BC-%ED%95%A8)
+- [ ] [Github Action With Gradle](https://cheese10yun.github.io/github-action-1/)
 
 ### Spring Profiles
 - [x] [Don't Use the @Profile Annotation in a Spring Boot App!](https://reflectoring.io/dont-use-spring-profile-annotation/)
@@ -79,6 +82,14 @@ springboot bookstore application
 - [x] [Spring Profiles](https://www.baeldung.com/spring-profiles)
 - [x] [스프링 부트 개념과 활용 - Profile](https://dailyheumsi.tistory.com/172)
 - [x] [Spring @Profile 애노테이션](https://johngrib.github.io/wiki/spring-annotation-profile/)
+
+### Spring Boot Test
+- [ ] [Spring Boot Test](https://cheese10yun.github.io/spring-boot-test/)
+- [ ] [Unit Testing with Spring Boot](https://reflectoring.io/unit-testing-spring-boot/)
+- [ ] [Testing MVC Web Controllers with Spring Boot and @WebMvcTest](https://reflectoring.io/spring-boot-web-controller-test/)
+- [ ] [Testing JPA Queries with Spring Boot and @DataJpaTest](https://reflectoring.io/spring-boot-data-jpa-test/)
+- [ ] [Integration Tests with Spring Boot and @SpringBootTest](https://reflectoring.io/spring-boot-test/)
+- [ ] [Testing Spring Boot Applications Masterclass](https://rieckpil.de/testing-spring-boot-applications-masterclass/)
 
 ### Test
 
@@ -90,7 +101,7 @@ springboot bookstore application
 - [ ] [자바 플레이그라운드 with TDD, 클린코드 ](https://edu.nextstep.camp/c/9WPRB0ys/)
 
 ### Mockito
-
+- [Class BDDMockito](https://javadoc.io/static/org.mockito/mockito-core/3.11.2/org/mockito/BDDMockito.html)
 - [x] [Quick Guide to BDDMockito](https://www.baeldung.com/bdd-mockito)
 - [x] [BBD스타일을 위한 MockitoBBD](https://mskwon25.github.io/tdd/MockitoBBD/)
 - [x] [Mockito를 이용하여 테스트 코드 작성하는 방법](https://codechacha.com/ko/mockito-best-practice/)
