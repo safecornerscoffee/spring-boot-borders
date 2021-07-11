@@ -44,8 +44,8 @@ springboot bookstore application
 - [ ] [Introduction to Spring Method Security](https://www.baeldung.com/spring-security-method-security)
 - [x] [Spring Security Authentication Interface](https://docs.spring.io/spring-security/site/docs/5.0.3.RELEASE/api/org/springframework/security/core/Authentication.html)
 - [x] [Spring Security: Authentication with a Database-backed UserDetailsService](https://www.baeldung.com/spring-security-authentication-with-a-database)
-
 - [ ] [Spring Security 파헤치기](https://sjh836.tistory.com/165)
+
 - [ ] [Spring Security Start](https://changrea.io/spring/spring-security-start/)
 - [ ] [Spring Security Authentication: Form, success, failure](https://changrea.io/spring/spring-security-authentication/)
 - [ ] [Spring Security Authentication: DB, Password, Logout](https://changrea.io/spring/spring-security-authentication-db/)
