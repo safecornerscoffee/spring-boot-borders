@@ -34,6 +34,7 @@ springboot bookstore application
 - [ ] [@NaturalId – A good way to persist natural IDs with Hibernate?](https://thorben-janssen.com/naturalid-good-way-persist-natural-ids-hibernate/)
 - [ ] [Map Associations with JPA and Hibernate – The Ultimate Guide](https://thorben-janssen.com/ultimate-guide-association-mappings-jpa-hibernate/)
 - [ ] [Best Practices for Many-To-One and One-To-Many Association Mappings](https://thorben-janssen.com/best-practices-many-one-one-many-associations-mappings/)
+- [ ] [LocalDateTime to JSON by Gson, Jackson2](https://namocom.tistory.com/674)
 
 ### Spring Security
 - [ ] [Spring Boot Security Playlist](https://www.youtube.com/playlist?list=PLVApX3evDwJ1d0lKKHssPQvzv2Ao3e__Q)
