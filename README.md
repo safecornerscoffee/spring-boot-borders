@@ -51,7 +51,7 @@ springboot bookstore application
 
 ### Spring Security Test
 
-- [Spring-Security 19.Testing](https://docs.spring.io/spring-security/site/docs/5.3.2.RELEASE/reference/html5/#test)
+- [x] [Spring-Security 19.Testing](https://docs.spring.io/spring-security/site/docs/5.3.2.RELEASE/reference/html5/#test)
 - [x] [Setting Up MockMvc and Spring Security](https://docs.spring.io/spring-security/site/docs/4.0.4.RELEASE/reference/html/test-mockmvc.html)
 - [x] [Spring Security for Spring Boot Integration Tests](https://www.baeldung.com/spring-security-integration-tests)
 - [x] [Spring-Security 19. Testing kr](https://godekdls.github.io/Spring%20Security/testing/)
@@ -101,7 +101,7 @@ springboot bookstore application
 - [ ] [자바 플레이그라운드 with TDD, 클린코드 ](https://edu.nextstep.camp/c/9WPRB0ys/)
 
 ### Mockito
-- [Class BDDMockito](https://javadoc.io/static/org.mockito/mockito-core/3.11.2/org/mockito/BDDMockito.html)
+- [x] [Class BDDMockito](https://javadoc.io/static/org.mockito/mockito-core/3.11.2/org/mockito/BDDMockito.html)
 - [x] [Quick Guide to BDDMockito](https://www.baeldung.com/bdd-mockito)
 - [x] [BBD스타일을 위한 MockitoBBD](https://mskwon25.github.io/tdd/MockitoBBD/)
 - [x] [Mockito를 이용하여 테스트 코드 작성하는 방법](https://codechacha.com/ko/mockito-best-practice/)
