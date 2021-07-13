@@ -85,6 +85,7 @@ springboot bookstore application
 
 ### Spring Profiles
 - [ ] [Spring Boot Configuration Metadata](https://docs.spring.io/spring-boot/docs/current/reference/html/configuration-metadata.html)
+- [ ] [A Guide to Spring Boot Configuration Metadata](https://www.baeldung.com/spring-boot-configuration-metadata)
 - [x] [Don't Use the @Profile Annotation in a Spring Boot App!](https://reflectoring.io/dont-use-spring-profile-annotation/)
 - [x] [One-Stop Guide to Profiles with Spring Boot](https://reflectoring.io/spring-boot-profiles/)
 - [x] [When Not to Use Profiles?](https://reflectoring.io/spring-boot-profiles/#when-not-to-use-profiles)
