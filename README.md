@@ -84,6 +84,7 @@ springboot bookstore application
 - [ ] [Github Action With Gradle](https://cheese10yun.github.io/github-action-1/)
 
 ### Spring Profiles
+- [ ] [Spring Boot Configuration Metadata](https://docs.spring.io/spring-boot/docs/current/reference/html/configuration-metadata.html)
 - [x] [Don't Use the @Profile Annotation in a Spring Boot App!](https://reflectoring.io/dont-use-spring-profile-annotation/)
 - [x] [One-Stop Guide to Profiles with Spring Boot](https://reflectoring.io/spring-boot-profiles/)
 - [x] [When Not to Use Profiles?](https://reflectoring.io/spring-boot-profiles/#when-not-to-use-profiles)
