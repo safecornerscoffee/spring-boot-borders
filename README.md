@@ -90,6 +90,8 @@ springboot bookstore application
 - [x] [Spring Profiles](https://www.baeldung.com/spring-profiles)
 - [x] [스프링 부트 개념과 활용 - Profile](https://dailyheumsi.tistory.com/172)
 - [x] [Spring @Profile 애노테이션](https://johngrib.github.io/wiki/spring-annotation-profile/)
+- [ ] [Properties with Spring and Spring Boot](https://www.baeldung.com/properties-with-spring)
+- [ ] [Guide to @ConfigurationProperties in Spring Boot](https://www.baeldung.com/configuration-properties-in-spring-boot)
 
 ### Spring Boot Test
 - [ ] [Spring Boot Test](https://cheese10yun.github.io/spring-boot-test/)
