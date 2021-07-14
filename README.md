@@ -37,6 +37,7 @@ springboot bookstore application
 - [ ] [Best Practices for Many-To-One and One-To-Many Association Mappings](https://thorben-janssen.com/best-practices-many-one-one-many-associations-mappings/)
 - [ ] [LocalDateTime to JSON by Gson, Jackson2](https://namocom.tistory.com/674)
 
+
 ### Spring Security
 - [ ] [Spring Security Reference](https://docs.spring.io/spring-security/site/docs/current/reference/html5/)
 - [ ] [Spring Boot Security Playlist](https://www.youtube.com/playlist?list=PLVApX3evDwJ1d0lKKHssPQvzv2Ao3e__Q)
@@ -150,6 +151,11 @@ springboot bookstore application
 
 ### `Optional<T>`
 - [ ] [Optional 과 null 에 대해](https://woowacourse.github.io/javable/post/2021-06-20-optional-vs-null/)
+
+### Database
+- [ ] [The table naming dilemma: singular vs. plural](https://medium.com/@fbnlsr/the-table-naming-dilemma-singular-vs-plural-dc260d90aaff)
+- [ ] [Use singular nouns for database table names](https://www.teamten.com/lawrence/programming/use-singular-nouns-for-database-table-names.html)
+- [ ] [Should table names be singular or plural?](https://tqdev.com/2021-should-table-names-be-singular-or-plural)
 
 ### Example
 - [ ] [Realworld-springboot-java](https://github.com/raeperd/realworld-springboot-java)
