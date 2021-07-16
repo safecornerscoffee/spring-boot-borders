@@ -37,7 +37,6 @@ springboot bookstore application
 - [ ] [Best Practices for Many-To-One and One-To-Many Association Mappings](https://thorben-janssen.com/best-practices-many-one-one-many-associations-mappings/)
 - [ ] [LocalDateTime to JSON by Gson, Jackson2](https://namocom.tistory.com/674)
 
-
 ### Spring Security
 - [ ] [Spring Security Reference](https://docs.spring.io/spring-security/site/docs/current/reference/html5/)
 - [ ] [Spring Boot Security Playlist](https://www.youtube.com/playlist?list=PLVApX3evDwJ1d0lKKHssPQvzv2Ao3e__Q)
@@ -46,7 +45,7 @@ springboot bookstore application
 - [ ] [Introduction to Spring Method Security](https://www.baeldung.com/spring-security-method-security)
 - [x] [Spring Security Authentication Interface](https://docs.spring.io/spring-security/site/docs/5.0.3.RELEASE/api/org/springframework/security/core/Authentication.html)
 - [x] [Spring Security: Authentication with a Database-backed UserDetailsService](https://www.baeldung.com/spring-security-authentication-with-a-database)
-- [ ] [Spring Security 파헤치기](https://sjh836.tistory.com/165)
+- [x] [Spring Security 파헤치기](https://sjh836.tistory.com/165)
 - [ ] [Spring Security Start](https://changrea.io/spring/spring-security-start/)
 - [ ] [Spring Security Authentication: Form, success, failure](https://changrea.io/spring/spring-security-authentication/)
 - [ ] [Spring Security Authentication: DB, Password, Logout](https://changrea.io/spring/spring-security-authentication-db/)
@@ -56,7 +55,6 @@ springboot bookstore application
 - [x] [Spring Security XML: 2.로그인 페이지](https://gaemi606.tistory.com/entry/Spring-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0Spring-Security-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-2)
 - [x] [Spring Security XML: 3.JDBC 로그인](https://gaemi606.tistory.com/entry/Spring-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0Spring-Security-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-3-%EB%93%9C%EB%94%94%EC%96%B4-DB%EC%97%B0%EB%8F%99-%EB%A1%9C%EA%B7%B8%EC%9D%B8)
 - [x] [Spring Security XML: 4.MyBatis 로그인](https://gaemi606.tistory.com/entry/Spring-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0Spring-Security-4-MyBatis%EC%9D%B4%EC%9A%A9-%EB%A1%9C%EA%B7%B8%EC%9D%B8)
-
 
 ### Spring Security Test
 
@@ -140,6 +138,17 @@ springboot bookstore application
 
 - [ ] [Spring Boot tests with Testcontainers and PostgreSQL, MySQL or MariaDB ](https://blog.codeleak.pl/2020/03/spring-boot-tests-with-testcontainers.html)
 - [ ] [Docker Compose for Spring Boot application with PostgreSQL](https://blog.codeleak.pl/2020/03/spring-boot-docker-compose.html)
+
+### Spring AMQP
+- [x] [Spring guide Messaging with RabbitMQ](https://spring.io/guides/gs/messaging-rabbitmq/)
+- [ ] [Spring AMQP Reference](https://docs.spring.io/spring-amqp/reference/html/)
+- [ ] [Spring AMQP Reference 4.1.13. Delayed Message Exchange](https://docs.spring.io/spring-amqp/reference/html/#delayed-message-exchange)
+- [ ] [Spring AMQP Reference 4.3 Sample Applications](https://docs.spring.io/spring-amqp/reference/html/#sample-apps)
+- [x] [RabbitMQ docker image](https://hub.docker.com/_/rabbitmq)
+- [ ]  [RabbitMQ Tutorials with Spring AMQP ](https://www.rabbitmq.com/getstarted.html)
+- [ ] [Scheduling Messages with RabbitMQ](https://blog.rabbitmq.com/posts/2015/04/scheduling-messages-with-rabbitmq)
+- [ ] [RabbitMQ Delayed Message Plugin](https://github.com/rabbitmq/rabbitmq-delayed-message-exchange)
+
 
 ### OOP
 
