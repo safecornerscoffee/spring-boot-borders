@@ -151,7 +151,7 @@ springboot bookstore application
 
 
 ### OOP
-
+- [ ] [Tactica Domain Driven Design](https://vaadin.com/learn/tutorials/ddd/tactical_domain_driven_design)
 - [ ] [Spring OOP](https://cheese10yun.github.io/tags/#OOP)
 - [ ] [Spring OOP 프로그래밍 예제(6) - 캡슐화 내가 생각하는 캡슐화란(1)](https://cheese10yun.github.io/encapsulation-part-1/)
 - [ ] [Spring OOP 프로그래밍 예제(6) - 캡슐화 내가 생각하는 캡슐화란(2)](https://cheese10yun.github.io/encapsulation-part-2/)
