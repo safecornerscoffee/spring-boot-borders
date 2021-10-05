@@ -64,6 +64,7 @@ springboot bookstore application
 - [x] [Spring-Security 19. Testing kr](https://godekdls.github.io/Spring%20Security/testing/)
 - [x] [Spring Security 기반의 테스트 코드 작성하기](https://seokr.tistory.com/820)
 - [x] [Setting Up MockMvc and Spring Security](https://docs.spring.io/spring-security/site/docs/4.0.4.RELEASE/reference/html/test-mockmvc.html)
+- [x] [Custom @WithMockUser](https://smjeon.dev/etc/with-mock-user/)
 
 ### Spring Security JDBC Authentication
 
