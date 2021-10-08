@@ -1,6 +1,5 @@
 package com.safecornerscoffee.borders.domain.item;
 
-import com.safecornerscoffee.borders.domain.item.Item;
 import lombok.Getter;
 import lombok.Setter;
 

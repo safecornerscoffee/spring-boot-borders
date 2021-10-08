@@ -21,10 +21,10 @@ public class Authority {
     @JoinColumn(name = "email", referencedColumnName = "email")
     private Member member;
 
-    private String authority;
+    private String name;
 
-    public Authority(Member member, String authority) {
+    public Authority(Member member, String name) {
         this.member = member;
-        this.authority = authority;
+        this.name = name;
     }
 }
