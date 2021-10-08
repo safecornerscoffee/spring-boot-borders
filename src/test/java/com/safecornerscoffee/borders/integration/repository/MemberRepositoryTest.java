@@ -51,7 +51,6 @@ public class MemberRepositoryTest {
 
         assertThat(findMember.getId()).isEqualTo(member.getId());
         assertThat(findMember.getEmail()).isEqualTo(member.getEmail());
-        assertThat(findMember).isEqualTo(member);
-        assertThat(findMember).isSameAs(member);
+        assertThat(findMember).isEqualTo(member).isSameAs(member);
     }
 }
