@@ -16,7 +16,7 @@ springboot bookstore application
 - [x] [Thymeleaf Page layouts](https://www.thymeleaf.org/doc/articles/layouts.html)
 - [x] [Thymeleaf Examples: Layouts](https://github.com/thymeleaf/thymeleafexamples-layouts)
 - [x] [Introduction to Using Thymeleaf in Spring](https://www.baeldung.com/thymeleaf-in-spring-mvc)
-- [ ] [Thymeleaf + Spring](https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html)
+- [x] [Thymeleaf + Spring](https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html)
 - [x] [Themeleaf + Spring Security dialect](https://minholee93.tistory.com/entry/Spring-Security-Thymeleaf-Integration-Spring-Boot-9)
 - [x] [Spring Security with Thymeleaf](https://www.baeldung.com/spring-security-thymeleaf)
 
@@ -35,22 +35,22 @@ springboot bookstore application
 - [ ] [@NaturalId – A good way to persist natural IDs with Hibernate?](https://thorben-janssen.com/naturalid-good-way-persist-natural-ids-hibernate/)
 - [ ] [Map Associations with JPA and Hibernate – The Ultimate Guide](https://thorben-janssen.com/ultimate-guide-association-mappings-jpa-hibernate/)
 - [ ] [Best Practices for Many-To-One and One-To-Many Association Mappings](https://thorben-janssen.com/best-practices-many-one-one-many-associations-mappings/)
-- [ ] [LocalDateTime to JSON by Gson, Jackson2](https://namocom.tistory.com/674)
+- [x] [LocalDateTime to JSON by Gson, Jackson2](https://namocom.tistory.com/674)
 
 ### Spring Security
-- [ ] [Spring Security Reference](https://docs.spring.io/spring-security/site/docs/current/reference/html5/)
-- [ ] [Spring Boot Security Playlist](https://www.youtube.com/playlist?list=PLVApX3evDwJ1d0lKKHssPQvzv2Ao3e__Q)
-- [ ] [Granted Authority Versus Role in Spring Security](https://www.baeldung.com/spring-security-granted-authority-vs-role)
+- [x] [Spring Security Reference](https://docs.spring.io/spring-security/site/docs/current/reference/html5/)
+- [x] [Spring Boot Security Playlist](https://www.youtube.com/playlist?list=PLVApX3evDwJ1d0lKKHssPQvzv2Ao3e__Q)
+- [x] [Granted Authority Versus Role in Spring Security](https://www.baeldung.com/spring-security-granted-authority-vs-role)
 - [x] [Spring Security Architecture](https://spring.io/guides/topicals/spring-security-architecture#_customizing_authentication_managers)
 - [ ] [Introduction to Spring Method Security](https://www.baeldung.com/spring-security-method-security)
 - [x] [Spring Security Authentication Interface](https://docs.spring.io/spring-security/site/docs/5.0.3.RELEASE/api/org/springframework/security/core/Authentication.html)
 - [x] [Spring Security: Authentication with a Database-backed UserDetailsService](https://www.baeldung.com/spring-security-authentication-with-a-database)
 - [x] [Spring Security 파헤치기](https://sjh836.tistory.com/165)
-- [ ] [Spring Security Start](https://changrea.io/spring/spring-security-start/)
-- [ ] [Spring Security Authentication: Form, success, failure](https://changrea.io/spring/spring-security-authentication/)
-- [ ] [Spring Security Authentication: DB, Password, Logout](https://changrea.io/spring/spring-security-authentication-db/)
-- [ ] [Spring Security Authorization](https://changrea.io/spring/spring-security-authorization/)
-- [ ] [Spring Security Session and CSRF](https://changrea.io/spring/spring-security-session-csrf/)
+- [x] [Spring Security Start](https://changrea.io/spring/spring-security-start/)
+- [x] [Spring Security Authentication: Form, success, failure](https://changrea.io/spring/spring-security-authentication/)
+- [x] [Spring Security Authentication: DB, Password, Logout](https://changrea.io/spring/spring-security-authentication-db/)
+- [x] [Spring Security Authorization](https://changrea.io/spring/spring-security-authorization/)
+- [x] [Spring Security Session and CSRF](https://changrea.io/spring/spring-security-session-csrf/)
 - [x] [Spring Security XML: 1.의존성 추가](https://gaemi606.tistory.com/entry/Spring-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0Spring-Security-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-1)
 - [x] [Spring Security XML: 2.로그인 페이지](https://gaemi606.tistory.com/entry/Spring-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0Spring-Security-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-2)
 - [x] [Spring Security XML: 3.JDBC 로그인](https://gaemi606.tistory.com/entry/Spring-%EC%8A%A4%ED%94%84%EB%A7%81-%EC%8B%9C%ED%81%90%EB%A6%AC%ED%8B%B0Spring-Security-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0-3-%EB%93%9C%EB%94%94%EC%96%B4-DB%EC%97%B0%EB%8F%99-%EB%A1%9C%EA%B7%B8%EC%9D%B8)
@@ -127,13 +127,13 @@ springboot bookstore application
 - [x] [Setting up a CI/CD Process on GitHub with Travis CI](https://blog.travis-ci.com/2019-05-30-setting-up-a-ci-cd-process-on-github)
 - [x] [Travis-CI Build Stages](https://docs.travis-ci.com/user/build-stages/)
 - [x] [Travis-CI Conditional Builds, Stages and Jobs](https://docs.travis-ci.com/user/conditional-builds-stages-jobs/)
-- [ ] [Travis-CI Using Docker in Builds](https://docs.travis-ci.com/user/docker/#using-docker-compose)
+- [x] [Travis-CI Using Docker in Builds](https://docs.travis-ci.com/user/docker/#using-docker-compose)
 
 ### Test Coverage
 
-- [ ] [코드 분석 도구 적용기 - 1편, 코드 커버리지(Code Coverage)가 뭔가요?](https://velog.io/@lxxjn0/%EC%BD%94%EB%93%9C-%EB%B6%84%EC%84%9D-%EB%8F%84%EA%B5%AC-%EC%A0%81%EC%9A%A9%EA%B8%B0-1%ED%8E%B8-%EC%BD%94%EB%93%9C-%EC%BB%A4%EB%B2%84%EB%A6%AC%EC%A7%80Code-Coverage%EA%B0%80-%EB%AD%94%EA%B0%80%EC%9A%94)
-- [ ] [코드 분석 도구 적용기 - 2편, JaCoCo 적용하기](https://velog.io/@lxxjn0/%EC%BD%94%EB%93%9C-%EB%B6%84%EC%84%9D-%EB%8F%84%EA%B5%AC-%EC%A0%81%EC%9A%A9%EA%B8%B0-2%ED%8E%B8-JaCoCo-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
-- [ ] [코드 분석 도구 적용기 - 3편, SonarQube 적용하기](https://velog.io/@lxxjn0/%EC%BD%94%EB%93%9C-%EB%B6%84%EC%84%9D-%EB%8F%84%EA%B5%AC-%EC%A0%81%EC%9A%A9%EA%B8%B0-3%ED%8E%B8-SonarQube-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
+- [x] [코드 분석 도구 적용기 - 1편, 코드 커버리지(Code Coverage)가 뭔가요?](https://velog.io/@lxxjn0/%EC%BD%94%EB%93%9C-%EB%B6%84%EC%84%9D-%EB%8F%84%EA%B5%AC-%EC%A0%81%EC%9A%A9%EA%B8%B0-1%ED%8E%B8-%EC%BD%94%EB%93%9C-%EC%BB%A4%EB%B2%84%EB%A6%AC%EC%A7%80Code-Coverage%EA%B0%80-%EB%AD%94%EA%B0%80%EC%9A%94)
+- [x] [코드 분석 도구 적용기 - 2편, JaCoCo 적용하기](https://velog.io/@lxxjn0/%EC%BD%94%EB%93%9C-%EB%B6%84%EC%84%9D-%EB%8F%84%EA%B5%AC-%EC%A0%81%EC%9A%A9%EA%B8%B0-2%ED%8E%B8-JaCoCo-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
+- [x] [코드 분석 도구 적용기 - 3편, SonarQube 적용하기](https://velog.io/@lxxjn0/%EC%BD%94%EB%93%9C-%EB%B6%84%EC%84%9D-%EB%8F%84%EA%B5%AC-%EC%A0%81%EC%9A%A9%EA%B8%B0-3%ED%8E%B8-SonarQube-%EC%A0%81%EC%9A%A9%ED%95%98%EA%B8%B0)
 
 ### TestContainers
 
@@ -146,13 +146,13 @@ springboot bookstore application
 - [ ] [Spring AMQP Reference 4.1.13. Delayed Message Exchange](https://docs.spring.io/spring-amqp/reference/html/#delayed-message-exchange)
 - [ ] [Spring AMQP Reference 4.3 Sample Applications](https://docs.spring.io/spring-amqp/reference/html/#sample-apps)
 - [x] [RabbitMQ docker image](https://hub.docker.com/_/rabbitmq)
-- [ ]  [RabbitMQ Tutorials with Spring AMQP ](https://www.rabbitmq.com/getstarted.html)
+- [ ] [RabbitMQ Tutorials with Spring AMQP ](https://www.rabbitmq.com/getstarted.html)
 - [ ] [Scheduling Messages with RabbitMQ](https://blog.rabbitmq.com/posts/2015/04/scheduling-messages-with-rabbitmq)
 - [ ] [RabbitMQ Delayed Message Plugin](https://github.com/rabbitmq/rabbitmq-delayed-message-exchange)
 
 
 ### OOP
-- [ ] [Tactica Domain Driven Design](https://vaadin.com/learn/tutorials/ddd/tactical_domain_driven_design)
+- [ ] [Tactical Domain Driven Design](https://vaadin.com/learn/tutorials/ddd/tactical_domain_driven_design)
 - [ ] [Spring OOP](https://cheese10yun.github.io/tags/#OOP)
 - [ ] [Spring OOP 프로그래밍 예제(6) - 캡슐화 내가 생각하는 캡슐화란(1)](https://cheese10yun.github.io/encapsulation-part-1/)
 - [ ] [Spring OOP 프로그래밍 예제(6) - 캡슐화 내가 생각하는 캡슐화란(2)](https://cheese10yun.github.io/encapsulation-part-2/)
@@ -160,12 +160,12 @@ springboot bookstore application
 - [ ] [Spring 예제로 보는 SOLID OCP](https://cheese10yun.github.io/spring-solid-ocp/)
 
 ### `Optional<T>`
-- [ ] [Optional 과 null 에 대해](https://woowacourse.github.io/javable/post/2021-06-20-optional-vs-null/)
+- [x] [Optional 과 null 에 대해](https://woowacourse.github.io/javable/post/2021-06-20-optional-vs-null/)
 
 ### Database
-- [ ] [The table naming dilemma: singular vs. plural](https://medium.com/@fbnlsr/the-table-naming-dilemma-singular-vs-plural-dc260d90aaff)
-- [ ] [Use singular nouns for database table names](https://www.teamten.com/lawrence/programming/use-singular-nouns-for-database-table-names.html)
-- [ ] [Should table names be singular or plural?](https://tqdev.com/2021-should-table-names-be-singular-or-plural)
+- [x] [The table naming dilemma: singular vs. plural](https://medium.com/@fbnlsr/the-table-naming-dilemma-singular-vs-plural-dc260d90aaff)
+- [x] [Use singular nouns for database table names](https://www.teamten.com/lawrence/programming/use-singular-nouns-for-database-table-names.html)
+- [x] [Should table names be singular or plural?](https://tqdev.com/2021-should-table-names-be-singular-or-plural)
 
 ### Example
 - [ ] [Realworld-springboot-java](https://github.com/raeperd/realworld-springboot-java)
