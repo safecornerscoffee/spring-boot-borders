@@ -1,5 +1,7 @@
 # SpringBoot Borders
 [![Build Status](https://travis-ci.com/safecornerscoffee/spring-boot-borders.svg?branch=master)](https://travis-ci.com/safecornerscoffee/spring-boot-borders)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=safecornerscoffee_spring-boot-borders&metric=alert_status)](https://sonarcloud.io/dashboard?id=safecornerscoffee_spring-boot-borders)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=safecornerscoffee_spring-boot-borders&metric=coverage)](https://sonarcloud.io/dashboard?id=safecornerscoffee_spring-boot-borders)
 
 springboot bookstore application
 
