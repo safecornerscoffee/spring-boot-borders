@@ -46,6 +46,8 @@ dependencies {
 
 test {
 	useJUnitPlatform()
+
+	finalizedBy jacocoTestReport
 }
 
 jacoco {
@@ -56,8 +58,21 @@ jacocoTestReport {
 	reports {
 		xml.enabled true
 	}
+
+	finalizedBy 'jacocoTestCoverageVerification'
 }
 
+jacocoTestCoverageVerification {
+	violationRules {
+		rule {
+			limit {
+				counter = 'LINE'
+				value = 'COVEREDRATIO'
+				minimum = 0.8
+			}
+		}
+	}
+}
 
 sonarqube {
 	properties {
