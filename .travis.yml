@@ -12,6 +12,4 @@ addons:
     organization: "safecornerscoffee"
 
 script:
-  - ./gradlew sonarqube
-
-
+  - ./gradlew test sonarqube
