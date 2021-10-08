@@ -7,18 +7,11 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
-jobs:
-  include:
-    - stage: test
-      script:
-        - "./gradlew test"
-    - stage: build
-      script:
-        - "./gradlew clean build"
+addons:
+  sonarcloud:
+    organization: "safecornerscoffee"
 
-stages:
-  - name: test
-#  - name: build
-#    if: branch = master
+script:
+  - ./gradlew sonarqube
 
 
