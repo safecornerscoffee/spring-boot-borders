@@ -12,9 +12,9 @@ import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name = "members")
@@ -68,7 +68,10 @@ public class Member implements Serializable, UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
+        return authorities.stream()
+                .map(authority -> {
+                    return new SimpleGrantedAuthority(authority.getName());
+                }).collect(Collectors.toList());
     }
 
     @Override

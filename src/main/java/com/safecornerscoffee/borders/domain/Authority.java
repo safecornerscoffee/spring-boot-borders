@@ -21,6 +21,7 @@ public class Authority {
     @JoinColumn(name = "email", referencedColumnName = "email")
     private Member member;
 
+    @Column(name="authority")
     private String name;
 
     public Authority(Member member, String name) {

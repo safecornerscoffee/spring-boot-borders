@@ -5,6 +5,8 @@ import com.safecornerscoffee.borders.domain.Member;
 import com.safecornerscoffee.borders.service.MemberService;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.platform.commons.logging.Logger;
+import org.junit.platform.commons.logging.LoggerFactory;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -26,10 +28,13 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @Transactional
 public class SessionControllerIntegrationTest {
+
+    private final static Logger logger = LoggerFactory.getLogger(SessionControllerIntegrationTest.class);
 
     @Autowired
     WebApplicationContext context;

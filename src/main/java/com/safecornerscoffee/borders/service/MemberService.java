@@ -25,9 +25,9 @@ public class MemberService {
     public Long join(Member member) {
         validateDuplicateMember(member);
         member.setPassword(passwordEncoder.encode(member.getPassword()));
-        memberRepository.save(member);
         Authority authority = new Authority(member,"ROLE_USER");
         member.addAuthority(authority);
+        memberRepository.save(member);
         return member.getId();
     }
 
